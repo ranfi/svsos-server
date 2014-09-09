@@ -7,10 +7,10 @@ import com.svsos.core.spring.Profiles;
 
 public class StartServer {
 
-	public static final int PORT = 8080;
-	public static final String CONTEXT = "/lianxi-api";
+	public static final int PORT = 8081;
+	public static final String CONTEXT = "/svsos-api";
 	public static final String[] TLD_JAR_NAMES = new String[] { "sitemesh",
-			"spring-webmvc", "shiro-web", "lianxi-core" };
+			"spring-webmvc", "shiro-web", "svsos-core" };
 
 	public static void main(String[] args) throws Exception {
 

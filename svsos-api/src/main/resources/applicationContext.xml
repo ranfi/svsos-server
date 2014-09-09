@@ -59,7 +59,6 @@
 	<!-- 定义aspectj -->
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 
-	<bean class="com.svsos.api.task.TaskThreadManager" scope="singleton" init-method="doExecute"></bean>
 
 	<!-- production环境 -->
 	<beans profile="production">
