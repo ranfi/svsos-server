@@ -16,21 +16,6 @@ public enum ExceptionCode{
 	MISSINGPARAMETER("20104","Missing parameter!"),
 	UPLOADFILEEXCEPTION("20105","upload file exception!"),
 	
-	SERVANTISFULL("30100", "您的仆人已满"),							//您的仆人已满
-	SERVANTHASMASTER("30102", "该仆人已有主人"),						//您的仆人已满
-	RELATIONSHIPEXPIRED("30103", "该关系不存在了"),					//关系不存在了
-	REPEATREQUEST("30104", "您已经申请过了"),						//您已经申请过了
-	ISYOURMASTER("30105", "已经是您的主人了"),						//您已经申请过了
-	ISYOURSERVANT("30106", "已经是您的仆人了"),						//您已经申请过了
-	
-	IMMSGERROR("30150", "消息发送失败"),								//关系不存在了
-	
-	FLOWERNOTENOUGH("30200", "鲜花不足"),							//关系不存在了
-	
-	REGISTED("30250", "今日已经签到了"),								//关系不存在了
-	
-	
-	
 	
 	;
 	
@@ -51,8 +36,5 @@ public enum ExceptionCode{
 		return SERVEREXCEPTION;
 	}
 	
-	public static void main(String[] args) {
-		System.out.println(getExceptionCode(ExceptionCode.SERVANTISFULL.toString()));
-	}
-
+	
 }
