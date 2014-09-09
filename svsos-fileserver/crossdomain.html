@@ -1,0 +1,18 @@
+<script type="text/javascript">
+		document.domain = "chongipet.com";
+        function request(params){ 
+            var url = location.href;  
+            var paramString = url.substring(url.indexOf("?")+1,url.length).split("&");  
+            var obj = {}  
+            for (i=0; j=paramString[i]; i++){  
+                obj[j.substring(0,j.indexOf("="))] = j.substring(j.indexOf("=")+1,j.length);  
+            }  
+            var returnData = obj[params];
+            if(typeof(returnData)=="undefined"){  
+                return "";  
+            }else{  
+                return returnData;  
+            }  
+        } 
+        window.parent.callBackData(request('result'),request('callback'),request('hashkey'),request('width'),request('height'));
+</script>
