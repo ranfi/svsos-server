@@ -71,16 +71,29 @@ configure(subprojects) { subproject ->
     dependencies {  
         compile "mysql:mysql-connector-java:${mysqlVersion}"
         compile "org.slf4j:slf4j-api:${slf4jVersion}"
-        compile("org.apache.tomcat:tomcat-jdbc:${tomcatjdbcVersion}"){
-        	//transitive = false
-        }
+        compile "ch.qos.logback:logback-classic:${logbackVersion}"
+        compile "com.googlecode.log4jdbc:log4jdbc:1.2"
+        compile("org.apache.tomcat:tomcat-jdbc:${tomcatjdbcVersion}")
         compile "org.apache.commons:commons-lang3:3.3.2"
         compile("org.springframework:spring-core:${springVersion}")
         compile("org.springframework:spring-beans:${springVersion}")
         compile("org.springframework:spring-context:${springVersion}")
+        compile("org.springframework:spring-context-support:${springVersion}")
         compile("org.springframework:spring-web:${springVersion}")
         compile("org.springframework:spring-expression:${springVersion}")
-        compile("org.springframework.data:spring-data-jpa:${springjpaVersion}")
+        compile("org.springframework:spring-aop:${springVersion}")
+        compile("org.springframework:spring-tx:${springVersion}")
+        compile("org.springframework:spring-orm:${springVersion}")
+        compile 'org.springframework.data:spring-data-commons:1.9.0.RELEASE'
+        compile("org.springframework.data:spring-data-jpa:${springjpaVersion}"){
+        	//transitive = false
+        	exclude module: "spring-core"
+        	exclude module: "spring-context"
+        	exclude module: "spring-aop"
+        	exclude module: "spring-beans"
+        	exclude module: "spring-tx"
+        }
+        compile "org.aspectj:aspectjrt:1.8.2"
         testCompile "org.springframework:spring-test:${springVersion}"
         testCompile(
             "junit:junit:${junitVersion}"
