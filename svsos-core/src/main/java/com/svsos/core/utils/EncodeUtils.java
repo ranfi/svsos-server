@@ -30,14 +30,14 @@ public class EncodeUtils {
 	/**
 	 * Hex编码.
 	 */
-	public static String hexEncode(byte[] input) {
+	public static String encodeHex(byte[] input) {
 		return Hex.encodeHexString(input);
 	}
 
 	/**
 	 * Hex解码.
 	 */
-	public static byte[] hexDecode(String input) {
+	public static byte[] decodeHex(String input) {
 		try {
 			return Hex.decodeHex(input.toCharArray());
 		} catch (DecoderException e) {
@@ -48,7 +48,7 @@ public class EncodeUtils {
 	/**
 	 * Base64编码.
 	 */
-	public static String base64Encode(byte[] input) {
+	public static String encodeBase64(byte[] input) {
 		return new String(Base64.encodeBase64(input));
 	}
 
@@ -62,7 +62,7 @@ public class EncodeUtils {
 	/**
 	 * Base64解码.
 	 */
-	public static byte[] base64Decode(String input) {
+	public static byte[] decodeBase64(String input) {
 		return Base64.decodeBase64(input);
 	}
 

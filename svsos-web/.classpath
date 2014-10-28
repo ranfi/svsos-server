@@ -1,120 +1,359 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="src" path="src/test/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container" exported="true"/>
 	<classpathentry kind="src" path="/svsos-core" exported="true"/>
-	<classpathentry kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.24/a7d599d73b86a928303909b9be7573a4ea0ed28e/mysql-connector-java-5.1.24.jar" exported="true">
+	<classpathentry kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.24/a7d599d73b86a928303909b9be7573a4ea0ed28e/mysql-connector-java-5.1.24.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-jdbc/7.0.54/65a02498e2586d5dce84d210a843f1e02d640f09/tomcat-jdbc-7.0.54-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-jdbc/7.0.54/c325fb6d376df8bb34de0252aef2f7472658d4d7/tomcat-jdbc-7.0.54.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-jdbc/7.0.54/65a02498e2586d5dce84d210a843f1e02d640f09/tomcat-jdbc-7.0.54-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-jdbc/7.0.54/c325fb6d376df8bb34de0252aef2f7472658d4d7/tomcat-jdbc-7.0.54.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/d2a489573c0ed2c4942b3660decad5d65087b406/commons-lang3-3.3.2-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/d2a489573c0ed2c4942b3660decad5d65087b406/commons-lang3-3.3.2-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/3.1.4.RELEASE/49519e064d29af6dd7ba3be46ff6a51db93ebea8/spring-web-3.1.4.RELEASE-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/3.1.4.RELEASE/ccc9a401f6e146fe80108db9fbfde894cb63d6a0/spring-web-3.1.4.RELEASE.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/3.2.11.RELEASE/e06ce5e1157123c7e8eb4365f43fb2c1428683e6/spring-core-3.2.11.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/3.2.11.RELEASE/5f2645e4801907ce1ffea54eaebf79cdb58a1fa2/spring-core-3.2.11.RELEASE.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/1.6.1.RELEASE/5242c1edfcaa2f716222c7b72d042f24cb877461/spring-data-jpa-1.6.1.RELEASE-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/1.6.1.RELEASE/fa07f0cd58698af4286dff1c6d02a87fb61d52bf/spring-data-jpa-1.6.1.RELEASE.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/3.2.11.RELEASE/c1321c1896d8b8413e712c8ce4ec57847eabd3bb/spring-beans-3.2.11.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/3.2.11.RELEASE/f760312c99e7c172fd6611aeb7c2d18e586d4568/spring-beans-3.2.11.RELEASE.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/3.1.4.RELEASE/6fde7cef248bf106719a4f22696cb2a4eac7db98/spring-test-3.1.4.RELEASE-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/3.1.4.RELEASE/95bf2039588f5318a92202531b3c123c5f1bc7c9/spring-test-3.1.4.RELEASE.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/3.2.11.RELEASE/f253388646dc208d452f843dfa9a2af9eed8b0c6/spring-context-3.2.11.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/3.2.11.RELEASE/d223389e994ed74d03c35db8e8554aa461410468/spring-context-3.2.11.RELEASE.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/28e0ad201304e4a4abf999ca0570b7cffc352c3c/junit-4.11-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/3.2.11.RELEASE/4b64e018f3b3a1e2d7e0487f698fcf9ae52b9ef9/spring-web-3.2.11.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/3.2.11.RELEASE/77ada14cc181dacb62de4fdf5adabc9f1892c4d2/spring-web-3.2.11.RELEASE.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-juli/7.0.54/d535ab03b1c5d4004938f737e295b29ec15a74d0/tomcat-juli-7.0.54-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-juli/7.0.54/b1ab768678cb729831ed6ae926a90ab6f0974a60/tomcat-juli-7.0.54.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/3.2.11.RELEASE/e7bca4be84da6e6fc6be57e659d082a0b55915a0/spring-expression-3.2.11.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/3.2.11.RELEASE/2902e7f1b3d669e134f83d85d964c0e5bf5d7c7b/spring-expression-3.2.11.RELEASE.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/4a4b6d692e17846a9f3da036438a7ac491d3c814/aopalliance-1.0-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/1.6.1.RELEASE/5242c1edfcaa2f716222c7b72d042f24cb877461/spring-data-jpa-1.6.1.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/1.6.1.RELEASE/fa07f0cd58698af4286dff1c6d02a87fb61d52bf/spring-data-jpa-1.6.1.RELEASE.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/1.8.1.RELEASE/50a7966fa453b6a977154f9e35ab36cd40039800/spring-data-commons-1.8.1.RELEASE-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/1.8.1.RELEASE/add55d3fa4046f096567e08aee504b1baac25a29/spring-data-commons-1.8.1.RELEASE.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/3.2.11.RELEASE/5f5b3baa57b1123420e9e4437c12d8e090a69caa/spring-webmvc-3.2.11.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/3.2.11.RELEASE/2f462ade996c2d7fa37271feb1b9b5efffa59792/spring-webmvc-3.2.11.RELEASE.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/3.2.9.RELEASE/1aa9b885d0ce6a475ed7f3bae2b9cef029513ed3/spring-orm-3.2.9.RELEASE-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/3.2.9.RELEASE/24d1aa9860d3cc94454bfecd42a69a7bb33f1b4d/spring-orm-3.2.9.RELEASE.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/redis.clients/jedis/2.5.2/a293252183cb3d5d9d55af8a0f4aa0abd18bd2c2/jedis-2.5.2-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/redis.clients/jedis/2.5.2/83d833f48052456f197ba55ef2a82fc4909880b/jedis-2.5.2.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/3.2.9.RELEASE/e37f0ba3c53f82893bd1a74f36d969bad4d84515/spring-tx-3.2.9.RELEASE-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/3.2.9.RELEASE/feff0e34fad1b371b16d59af1a649f4e879e1605/spring-tx-3.2.9.RELEASE.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/1.5.2.RELEASE/71da917f0a956b59195e734eddd95f4da388cc89/spring-data-mongodb-1.5.2.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/1.5.2.RELEASE/e1068e54062c16959edd00932ee81c808ee4ec4d/spring-data-mongodb-1.5.2.RELEASE.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjrt/1.8.0/6922ad7eed511396a245f8e05aeacfdfeaacfaaf/aspectjrt-1.8.0-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjrt/1.8.0/302d0fe0abba26bbf5f31c3cd5337b3125c744e3/aspectjrt-1.8.0.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-redis/1.3.1.RELEASE/8f622c463ac4d49e4a4d55c274fc989fb5714166/spring-data-redis-1.3.1.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-redis/1.3.1.RELEASE/1f0e18e960a95ad530e88b0a76f5133de59836bc/spring-data-redis-1.3.1.RELEASE.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.7/b5a646b81b899e930f8600c5f45766dd82743d93/jcl-over-slf4j-1.7.7-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.7/56003dcd0a31deea6391b9e2ef2f2dc90b205a92/jcl-over-slf4j-1.7.7.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/3.6.10.Final/2540ab84fe2a54a63c6b8fe39ebd74aabf6611af/hibernate-core-3.6.10.Final-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/3.6.10.Final/6b36a1eef76cbccc2757f22a795b5e12ab56b3d5/hibernate-core-3.6.10.Final.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-entitymanager/3.6.10.Final/acd0908fb4c88a7072f4690b3f9439ad9e312b72/hibernate-entitymanager-3.6.10.Final-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-entitymanager/3.6.10.Final/c74f1e1bf4fb6b8eaa7e501e6ccba9e055e52974/hibernate-entitymanager-3.6.10.Final.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/3.2.9.RELEASE/34a438af17fd561c7cdf4165fba92de4262caa4f/spring-jdbc-3.2.9.RELEASE-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/3.2.9.RELEASE/8c2bfa6d91de268c219e569348aeab006e4df4c1/spring-jdbc-3.2.9.RELEASE.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-validator/4.3.2.Final/5360db301aaba26246cd77bb4ec6a22a8b55176/hibernate-validator-4.3.2.Final-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-validator/4.3.2.Final/b6d31d9b199bf99e7ca8908ad726c169ea98ab3f/hibernate-validator-4.3.2.Final.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/3.2.9.RELEASE/11aec1d2d54350958e9098f5ed335680a40333b4/spring-context-3.2.9.RELEASE-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/3.2.9.RELEASE/9de55b66bd227549b60b4b602f6d1a567a67dbba/spring-context-3.2.9.RELEASE.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-ehcache/3.6.10.Final/1a42da097c7834b8dc584ee208ff9c76066357b1/hibernate-ehcache-3.6.10.Final-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-ehcache/3.6.10.Final/733a798bcf6415c6199865975673e332138e69c7/hibernate-ehcache-3.6.10.Final.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/3.2.9.RELEASE/1930e91a57602851902742629e7471a9a06f0ea0/spring-aop-3.2.9.RELEASE-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/3.2.9.RELEASE/5410c5cd31fdf591ddebe23e0f727b5ba1a626b9/spring-aop-3.2.9.RELEASE.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.2/decd76e2c461157804473468bbdc6b8eb6d6121b/logback-classic-1.1.2-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.2/b316e9737eea25e9ddd6d88eaeee76878045c6b2/logback-classic-1.1.2.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/3.2.9.RELEASE/e44a3cdcc20be53daad2a055cb40474d3e830bf2/spring-beans-3.2.9.RELEASE-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/3.2.9.RELEASE/31dcffd88a80b610ccd57ee9618301a1d883b53d/spring-beans-3.2.9.RELEASE.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.8.1/27b46a2cc083104e843271d69a1097dc3b457c2f/aspectjweaver-1.8.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.8.1/da75e95c91703667b2ae20acdd3d8ee40ea7aabd/aspectjweaver-1.8.1.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/3.2.9.RELEASE/9c7e72bfa1ab9d0fcf742064094ef51b2d4b4e2a/spring-core-3.2.9.RELEASE-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/3.2.9.RELEASE/23566c793f7db5859dbceb98cd1a5789b489e0b5/spring-core-3.2.9.RELEASE.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.3.5/9351922abd5e659dcbacb1d38b81d8069bac797b/httpclient-4.3.5-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.3.5/9783d89b8eea20a517a4afc5f979bd2882b54c44/httpclient-4.3.5.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.7/acd62e31cc314266e73eebed0b6dd7ea974a0ed/slf4j-api-1.7.7-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.7/2b8019b6249bb05d81d3a3094e468753e2b21311/slf4j-api-1.7.7.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.3.1/a1fa20f7f3ad210f4b2eb51b63be3f0273be263a/commons-fileupload-1.3.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.3.1/c621b54583719ac0310404463d6d99db27e1052c/commons-fileupload-1.3.1.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/28bb0405fddaf04f15058fbfbe01fe2780d7d3b6/commons-logging-1.1.3-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.3/ba0ce5e28373e2a21f71395e711b961563ff619d/commons-io-2.3-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.3/cd8d6ffc833cc63c30d712a180f4663d8f55799b/commons-io-2.3.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/3.2.9.RELEASE/33a064badc1fce6f3feb530c1957ac5887c82bc5/spring-expression-3.2.9.RELEASE-sources.jar" kind="lib" path="/home/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/3.2.9.RELEASE/3dc5a9e674d969c377d3d737a5ca59a401b097f3/spring-expression-3.2.9.RELEASE.jar" exported="true">
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/ad97fe8faaf01a3d3faacecd58e8fa6e78a973ca/guava-18.0-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/net.sf.dozer/dozer/5.5.1/4ecba3adfc3816cdb0411bcdc50b4a2014747cd8/dozer-5.5.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/net.sf.dozer/dozer/5.5.1/f2e52ef54166788ae29b5b4eec6fdb9cd580acab/dozer-5.5.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.3.5/4063e01e81d69de00faa47f1c7af10f107bd26bd/httpmime-4.3.5-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.3.5/1dd0d38df9c6d21e893f2e52403f1cd99e91cd81/httpmime-4.3.5.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/opensymphony/sitemesh/2.4.2/4cb3b08c96553b0f4595a80917838ca302f67f3f/sitemesh-2.4.2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/javax.servlet/jstl/1.2/2f5877ef15adb721421e80f5aa2b6fe069eec8ed/jstl-1.2-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/javax.servlet/jstl/1.2/74aca283cd4f4b4f3e425f5820cda58f44409547/jstl-1.2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/javax.servlet.jsp/jsp-api/2.2.1-b03/5ee3f521021fd5d8c0a89a208a228c1ab10ef854/jsp-api-2.2.1-b03-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/javax.servlet.jsp/jsp-api/2.2.1-b03/c7205b380e9ceb4b96745656755f31f76ae01b74/jsp-api-2.2.1-b03.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/ab3976d4574c48d22dc1abf6a9e8bd0fdf928223/javax.servlet-api-3.1.0-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.shiro/shiro-ehcache/1.2.3/40ec9629f5181eabd09b6f614c92ea626218e307/shiro-ehcache-1.2.3-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.shiro/shiro-ehcache/1.2.3/d9663924e81f35eb937597819c82963473765987/shiro-ehcache-1.2.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.shiro/shiro-spring/1.2.3/db437ca9e54bc5704e87dfd6be9e06ca98c9cdef/shiro-spring-1.2.3-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.shiro/shiro-spring/1.2.3/1e1cce0a92ce3612967de861a2a94e01e47faa73/shiro-spring-1.2.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/net.sf.ehcache/ehcache-core/2.6.9/dc56b7205429180b56249093a89565f52b06dda3/ehcache-core-2.6.9-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/net.sf.ehcache/ehcache-core/2.6.9/e892585cc2cf95d46a2533df438a1d3323034ae8/ehcache-core-2.6.9.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.javasimon/javasimon-spring/3.5.1/905af4cfd38f581d07dbd07ba24507a86ae05fa3/javasimon-spring-3.5.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.javasimon/javasimon-spring/3.5.1/b47a5bd9784e71ff019b36b9c7a4e0510fe0974/javasimon-spring-3.5.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.javasimon/javasimon-jdbc4/3.5.1/d7c406dae1690cbb43928e86aca1a74ddf233e1f/javasimon-jdbc4-3.5.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.javasimon/javasimon-jdbc4/3.5.1/1bc16f59794bb63579b6ff10fc2cd965ee1c18f/javasimon-jdbc4-3.5.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.javasimon/javasimon-console-embed/3.5.1/b6263c912d39a4fd96a5744be24146f83d5fd5ac/javasimon-console-embed-3.5.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.javasimon/javasimon-console-embed/3.5.1/4da293a2fc207101c9524e08465a97c5bc59ac40/javasimon-console-embed-3.5.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/3.2.11.RELEASE/f9ef58cfce8d5edaa23e13c0257a24f623920000/spring-test-3.2.11.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/3.2.11.RELEASE/bb0d7709b015cc811232d06dfcfb6996123c5ba2/spring-test-3.2.11.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/28e0ad201304e4a4abf999ca0570b7cffc352c3c/junit-4.11-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-all/1.9.5/b8086d4e4daa361fc746abea62f77a2ae55d3ed9/mockito-all-1.9.5-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-all/1.9.5/79a8984096fc6591c1e3690e07d41be506356fa5/mockito-all-1.9.5.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-juli/7.0.54/d535ab03b1c5d4004938f737e295b29ec15a74d0/tomcat-juli-7.0.54-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-juli/7.0.54/b1ab768678cb729831ed6ae926a90ab6f0974a60/tomcat-juli-7.0.54.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/28bb0405fddaf04f15058fbfbe01fe2780d7d3b6/commons-logging-1.1.3-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/3.2.11.RELEASE/1603fa68dd384fa09110112a38711923ddc07eae/spring-aop-3.2.11.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/3.2.11.RELEASE/470020b04f4491b27e07d1ae2e83d707fabd72ca/spring-aop-3.2.11.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/1.8.1.RELEASE/50a7966fa453b6a977154f9e35ab36cd40039800/spring-data-commons-1.8.1.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/1.8.1.RELEASE/add55d3fa4046f096567e08aee504b1baac25a29/spring-data-commons-1.8.1.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/3.2.9.RELEASE/1aa9b885d0ce6a475ed7f3bae2b9cef029513ed3/spring-orm-3.2.9.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/3.2.9.RELEASE/24d1aa9860d3cc94454bfecd42a69a7bb33f1b4d/spring-orm-3.2.9.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/3.2.9.RELEASE/e37f0ba3c53f82893bd1a74f36d969bad4d84515/spring-tx-3.2.9.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/3.2.9.RELEASE/feff0e34fad1b371b16d59af1a649f4e879e1605/spring-tx-3.2.9.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjrt/1.8.0/6922ad7eed511396a245f8e05aeacfdfeaacfaaf/aspectjrt-1.8.0-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjrt/1.8.0/302d0fe0abba26bbf5f31c3cd5337b3125c744e3/aspectjrt-1.8.0.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.7/b5a646b81b899e930f8600c5f45766dd82743d93/jcl-over-slf4j-1.7.7-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.7/56003dcd0a31deea6391b9e2ef2f2dc90b205a92/jcl-over-slf4j-1.7.7.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.9/3f15fff45d57656685abfee9e8302bf14580044c/commons-codec-1.9-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.9/9ce04e34240f674bc72680f8b843b1457383161a/commons-codec-1.9.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-pool2/2.0/b8c2748dccedf1fcd9bf6233b5b088fdd523c973/commons-pool2-2.0-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-pool2/2.0/4f8826f7a470c31f5089d73e3afa0d6761dc1b79/commons-pool2-2.0.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/antlr/antlr/2.7.6/604014ca080ee7d3547f044ff4bd2c6ebfc0b82b/antlr-2.7.6-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/antlr/antlr/2.7.6/cf4f67dae5df4f9932ae7810f4548ef3e14dd35e/antlr-2.7.6.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/dom4j/dom4j/1.6.1/a8e7149359255f43e0e5e3b1837948f9ed5861fb/dom4j-1.6.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/dom4j/dom4j/1.6.1/5d3ccc056b6f056dbf0dddfdf43894b9065a8f94/dom4j-1.6.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-commons-annotations/3.2.0.Final/6afdc971f4d4dbe7650dbc5ea4a67101779ca001/hibernate-commons-annotations-3.2.0.Final-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-commons-annotations/3.2.0.Final/ce990611448fc2865469e3b68d2fe76b050e3c4f/hibernate-commons-annotations-3.2.0.Final.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/1.0.1.Final/574f65373b46a038332eb1a14acc3142bd9e9810/hibernate-jpa-2.0-api-1.0.1.Final-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/1.0.1.Final/3306a165afa81938fc3d8a0948e891de9f6b192b/hibernate-jpa-2.0-api-1.0.1.Final.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/javax.transaction/jta/1.1/d5dad66d06246bd2e1e369cebff27faa9beb065a/jta-1.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/javax.transaction/jta/1.1/2ca09f0b36ca7d71b762e14ea2ff09d5eac57558/jta-1.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/cglib/cglib/2.2/962f2bbd66901a9d67b0bb3c8c4a64ce6de0a8c4/cglib-2.2-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/cglib/cglib/2.2/97d03461dc1c04ffc636dcb2579aae7724a78ef2/cglib-2.2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/javassist/javassist/3.12.0.GA/ea2821228cbe0e80aceac2db4302699c1a711f42/javassist-3.12.0.GA-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/javassist/javassist/3.12.0.GA/88b21d1ef06323beff58664cffa62848c033ecd2/javassist-3.12.0.GA.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.0.0.GA/7a561191db2203550fbfa40d534d4997624cd369/validation-api-1.0.0.GA-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.0.0.GA/b6bd7f9d78f6fdaa3c37dae18a4bd298915f328e/validation-api-1.0.0.GA.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.1.0.CR2/53dd1691828c99b7e7b353c9b0ad374fe7d73ef5/jboss-logging-3.1.0.CR2-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.1.0.CR2/28725380c07f917ace4e511db21cc45e9ae5a72b/jboss-logging-3.1.0.CR2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.2/502e1c764542fe747896c1dc04f023acfe0e5cbc/logback-core-1.1.2-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.2/2d23694879c2c12f125dac5076bdfd5d771cc4cb/logback-core-1.1.2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.3.2/4809f38359edeea9487f747e09aa58ec8d3a54c5/httpcore-4.3.2-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.3.2/31fbbff1ddbf98f3aa7377c94d33b0447c646b6e/httpcore-4.3.2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.1/44a8b7377eb4156f8a610985ed73e0395285f261/commons-beanutils-1.9.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.1/d2662a4e018671ed061e9acca6299a31b7652f3c/commons-beanutils-1.9.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.shiro/shiro-core/1.2.3/3758c653223303442149304cc558e8a54c46a00b/shiro-core-1.2.3-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.shiro/shiro-core/1.2.3/4ddf1b83360c7e39f02e3e20ca364d2c448ed01f/shiro-core-1.2.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.shiro/shiro-web/1.2.3/e6c9093e3dfe8384b2f9ab3678f6ec60965bafba/shiro-web-1.2.3-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.apache.shiro/shiro-web/1.2.3/4dbcac122a883c29d32fe94f6b1525e5a81884ec/shiro-web-1.2.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.javasimon/javasimon-core/3.5.1/2df8b85c3a34c6eaef6817b2fe043c5a8d56d5f7/javasimon-core-3.5.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.javasimon/javasimon-core/3.5.1/2198df4a02986f99d0b36577a3494cd5382f5b5d/javasimon-core-3.5.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/3.2.9.RELEASE/34a438af17fd561c7cdf4165fba92de4262caa4f/spring-jdbc-3.2.9.RELEASE-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/3.2.9.RELEASE/8c2bfa6d91de268c219e569348aeab006e4df4c1/spring-jdbc-3.2.9.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/asm/asm/3.1/2eaa4de56203f433f287a6df5885ef9ad3c5bcae/asm-3.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/asm/asm/3.1/c157def142714c544bdea2e6144645702adf7097/asm-3.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/4a4b6d692e17846a9f3da036438a7ac491d3c814/aopalliance-1.0-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.7/acd62e31cc314266e73eebed0b6dd7ea974a0ed/slf4j-api-1.7.7-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.7/2b8019b6249bb05d81d3a3094e468753e2b21311/slf4j-api-1.7.7.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.4.1/1cf086caa364e84c3ac86a4caa602a587a9bd550/jackson-core-2.4.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.4.1/b130bcfb5a9c410c3cbd2e0adec9437e69a39e2c/jackson-core-2.4.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ranfi/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.1/fa095ef874374e5b2a11f8b06c26a5d68c7cb3a4/commons-collections-3.2.1-sources.jar" kind="lib" path="/Users/ranfi/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.1/761ea405b9b37ced573d2df0d1e3a4e0f9edc668/commons-collections-3.2.1.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>

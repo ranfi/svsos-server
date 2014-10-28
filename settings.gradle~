@@ -1,2 +1,0 @@
-include "svsos-core", "svsos-api","svsos-web"
-rootProject.name="svsos-server"
