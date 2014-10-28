@@ -114,7 +114,8 @@ project(':svsos-core') {
 	dependencies{
 		providedCompile (
 	        "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}",
-	        "org.eclipse.jetty.aggregate:jetty-webapp:8.1.15.v20140411",
+	        "org.eclipse.jetty.aggregate:jetty-webapp:8.1.16.v20140903",
+	        "org.eclipse.jetty:jetty-jsp:8.1.16.v20140903",
 	        "org.apache.httpcomponents:httpclient:${httpclientVersion}",
 	        "org.apache.httpcomponents:httpmime:${httpclientVersion}"
 	    )
