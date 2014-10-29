@@ -76,7 +76,7 @@
 	<logger name="jdbc.sqltiming" level="INFO"/>
 
 	<!-- root -->
-	<root level="debug">
+	<root level="info">
 		<appender-ref ref="console" />
 		<appender-ref ref="defaultLogFile" />
 	</root>
