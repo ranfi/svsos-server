@@ -13,9 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.google.common.collect.Lists;
 import com.svsos.backend.common.bo.Constant;
-import com.svsos.backend.datamodel.MenuNode;
 import com.svsos.backend.entity.Menu;
 import com.svsos.backend.entity.User;
+import com.svsos.backend.model.MenuNode;
 import com.svsos.backend.repositories.jpa.MenuDao;
 import com.svsos.core.utils.JsonMapper;
 

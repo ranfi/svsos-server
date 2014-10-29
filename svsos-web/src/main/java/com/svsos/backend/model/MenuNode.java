@@ -1,4 +1,4 @@
-package com.svsos.backend.datamodel;
+package com.svsos.backend.model;
 
 
 public class MenuNode {
