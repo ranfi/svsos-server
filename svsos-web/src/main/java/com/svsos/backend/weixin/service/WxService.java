@@ -6,9 +6,7 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Service;
-
 import com.svsos.backend.model.WxUser;
 import com.svsos.backend.repositories.jpa.WxUserDao;
 import com.svsos.backend.service.CommonService;
@@ -67,22 +65,63 @@ public class WxService {
 			// 文本消息
 			if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
 				respContent = "您发送的是文本消息！";
+				WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+				Timestamp createTime = commonService.getCurrentTime();
+				if(user != null)
+				{
+					user.setCreateTime(createTime);
+					user.setExpireTime(createTime.getTime() + 24 * 3600);
+					wxUserDao.save(user);
+				}
+				
 			}
 			// 图片消息
 			else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_IMAGE)) {
 				respContent = "您发送的是图片消息！";
+				WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+				Timestamp createTime = commonService.getCurrentTime();
+				if(user != null)
+				{
+					user.setCreateTime(createTime);
+					user.setExpireTime(createTime.getTime() + 24 * 3600);
+					wxUserDao.save(user);
+				}
 			}
 			// 地理位置消息
 			else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_LOCATION)) {
 				respContent = "您发送的是地理位置消息！";
+				WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+				Timestamp createTime = commonService.getCurrentTime();
+				if(user != null)
+				{
+					user.setCreateTime(createTime);
+					user.setExpireTime(createTime.getTime() + 24 * 3600);
+					wxUserDao.save(user);
+				}
 			}
 			// 链接消息
 			else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_LINK)) {
 				respContent = "您发送的是链接消息！";
+				WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+				Timestamp createTime = commonService.getCurrentTime();
+				if(user != null)
+				{
+					user.setCreateTime(createTime);
+					user.setExpireTime(createTime.getTime() + 24 * 3600);
+					wxUserDao.save(user);
+				}
 			}
 			// 音频消息
 			else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_VOICE)) {
 				respContent = "您发送的是音频消息！";
+				WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+				Timestamp createTime = commonService.getCurrentTime();
+				if(user != null)
+				{
+					user.setCreateTime(createTime);
+					user.setExpireTime(createTime.getTime() + 24 * 3600);
+					wxUserDao.save(user);
+				}
 			}
 			// 事件推送
 			else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_EVENT)) {
@@ -91,48 +130,169 @@ public class WxService {
 				// 订阅
 				if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {
 					Timestamp createTime = commonService.getCurrentTime();
-					WxUser user = new WxUser();
-					user.setWxId(fromUserName);
-					user.setCreateTime(createTime);
-					user.setExpireTime(createTime.getTime() + 24 * 3600);
-					wxUserDao.save(user);
+					WxUser user = wxUserDao.findWxUserByWxId(fromUserName);					
+					if(user != null && (user.getFollowStatus() == 0))						
+					{
+						user.setFollowStatus(1);
+						user.setCreateTime(createTime);
+						user.setExpireTime(createTime.getTime() + 24 * 3600);
+					}	
+					else
+					{
+						user = new WxUser();
+						user.setWxId(fromUserName);
+						user.setCreateTime(createTime);
+						user.setExpireTime(createTime.getTime() + 24 * 3600);
+					}	
+					wxUserDao.save(user);					
 					respContent = "谢谢您的关注！";
 				}
 				// 取消订阅
 				else if (eventType.equals(MessageUtil.EVENT_TYPE_UNSUBSCRIBE)) {
+					
+					//更新微信用户表的时候，将状态改为“取消”
+					WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+					if(user != null)
+					{
+						user.setFollowStatus(0);
+						wxUserDao.save(user);
+					}										
 					// TODO 取消订阅后用户再收不到公众号发送的消息，因此不需要回复消息
 				}
 				// 自定义菜单点击事件
 				else if (eventType.equals(MessageUtil.EVENT_TYPE_CLICK)) {
 					// 事件KEY值，与创建自定义菜单时指定的KEY值对应
 					String eventKey = requestMap.get("EventKey");
-
-					if (eventKey.equals("11")) {
-						respContent = "11菜单项被点击！";
-					} else if (eventKey.equals("12")) {
-						respContent = "12菜单项被点击！";
-					} else if (eventKey.equals("13")) {
-						respContent = "13菜单项被点击！";
-					} else if (eventKey.equals("14")) {
-						respContent = "14菜单项被点击！";
-					} else if (eventKey.equals("21")) {
+					if (eventKey.equals("21")) {
 						respContent = "21菜单项被点击！";
+						WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+						Timestamp createTime = commonService.getCurrentTime();
+						if(user != null)
+						{
+							user.setCreateTime(createTime);
+							user.setExpireTime(createTime.getTime() + 24 * 3600);
+							wxUserDao.save(user);
+						}
 					} else if (eventKey.equals("22")) {
 						respContent = "22菜单项被点击！";
+						WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+						Timestamp createTime = commonService.getCurrentTime();
+						if(user != null)
+						{
+							user.setCreateTime(createTime);
+							user.setExpireTime(createTime.getTime() + 24 * 3600);
+							wxUserDao.save(user);
+						}
 					} else if (eventKey.equals("23")) {
 						respContent = "23菜单项被点击！";
+						WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+						Timestamp createTime = commonService.getCurrentTime();
+						if(user != null)
+						{
+							user.setCreateTime(createTime);
+							user.setExpireTime(createTime.getTime() + 24 * 3600);
+							wxUserDao.save(user);
+						}
 					} else if (eventKey.equals("24")) {
 						respContent = "24菜单项被点击！";
+						WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+						Timestamp createTime = commonService.getCurrentTime();
+						if(user != null)
+						{
+							user.setCreateTime(createTime);
+							user.setExpireTime(createTime.getTime() + 24 * 3600);
+							wxUserDao.save(user);
+						}
 					} else if (eventKey.equals("25")) {
 						respContent = "25菜单项被点击！";
-					} else if (eventKey.equals("31")) {
-						respContent = "31菜单项被点击！";
-					} else if (eventKey.equals("32")) {
-						respContent = "32菜单项被点击！";
-					} else if (eventKey.equals("33")) {
-						respContent = "33菜单项被点击！";
-					}
+						WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+						Timestamp createTime = commonService.getCurrentTime();
+						if(user != null)
+						{
+							user.setCreateTime(createTime);
+							user.setExpireTime(createTime.getTime() + 24 * 3600);
+							wxUserDao.save(user);
+						}
+					} 
 				}
+				//点击菜单跳转到新页面时间
+				else if(eventType.equals(MessageUtil.EVENT_TYPE_VIEW)){
+					// 事件VIEW值，与创建自定义菜单时指定的URL值对应
+					String eventKey = requestMap.get("EventKey");
+
+					if (eventKey.equals("http://www.baidu.com")) {
+						WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+						Timestamp createTime = commonService.getCurrentTime();
+						if(user != null)
+						{
+							user.setCreateTime(createTime);
+							user.setExpireTime(createTime.getTime() + 24 * 3600);
+							wxUserDao.save(user);
+						}	
+						
+					} else if (eventKey.equals("12")) {
+						WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+						Timestamp createTime = commonService.getCurrentTime();
+						if(user != null)
+						{
+							user.setCreateTime(createTime);
+							user.setExpireTime(createTime.getTime() + 24 * 3600);
+							wxUserDao.save(user);
+						}
+					} else if (eventKey.equals("13")) {
+
+						WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+						Timestamp createTime = commonService.getCurrentTime();
+						if(user != null)
+						{
+							user.setCreateTime(createTime);
+							user.setExpireTime(createTime.getTime() + 24 * 3600);
+							wxUserDao.save(user);
+						}
+					} else if (eventKey.equals("14")) {
+
+						WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+						Timestamp createTime = commonService.getCurrentTime();
+						if(user != null)
+						{
+							user.setCreateTime(createTime);
+							user.setExpireTime(createTime.getTime() + 24 * 3600);
+							wxUserDao.save(user);
+						}
+					} else if (eventKey.equals("31")) {
+
+						WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+						Timestamp createTime = commonService.getCurrentTime();
+						if(user != null)
+						{
+							user.setCreateTime(createTime);
+							user.setExpireTime(createTime.getTime() + 24 * 3600);
+							wxUserDao.save(user);
+						}
+					} else if (eventKey.equals("32")) {
+
+						WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+						Timestamp createTime = commonService.getCurrentTime();
+						if(user != null)
+						{
+							user.setCreateTime(createTime);
+							user.setExpireTime(createTime.getTime() + 24 * 3600);
+							wxUserDao.save(user);
+						}
+					} else if (eventKey.equals("33")) {
+
+						WxUser user = wxUserDao.findWxUserByWxId(fromUserName);
+						Timestamp createTime = commonService.getCurrentTime();
+						if(user != null)
+						{
+							user.setCreateTime(createTime);
+							user.setExpireTime(createTime.getTime() + 24 * 3600);
+							wxUserDao.save(user);
+						}
+					}
+					
+				}
+				
 			}
 
 			textMessage.setContent(respContent);
