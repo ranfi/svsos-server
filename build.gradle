@@ -206,6 +206,9 @@ project(':svsos-web') {
         compile "org.javasimon:javasimon-console-embed:3.5.1"
         compile 'org.jolokia:jolokia:1.2.2'
         testCompile "org.mockito:mockito-all:1.9.5"
+        compile "dom4j:dom4j:1.6.1"
+        compile "com.thoughtworks.xstream:xstream:1.4.7"
+        compile "net.sf.json-lib:json-lib:2.4:jdk15"
     }
 
 	jettyRun {
