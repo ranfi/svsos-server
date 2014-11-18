@@ -3,9 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.eclipse.jetty.server.Request;
-import org.eclipse.jetty.server.Response;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,7 +35,7 @@ public class UoDoOrderController {
 	@Resource ServiceOrderDao serviceOrderDao;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public String list(Response response , Request request ,Model model) {
+	public String list(HttpServletResponse response, HttpServletRequest request ,Model model) {
 		List<ServiceOrder> orderLists = new ArrayList<ServiceOrder>(); 
 	    String username = WeixinUtil.getCookieValue(request);
 	    if(username != null){	    	
