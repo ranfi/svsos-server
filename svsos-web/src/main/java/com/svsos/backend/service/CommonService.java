@@ -1,5 +1,6 @@
 package com.svsos.backend.service;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 import javax.persistence.EntityManager;
@@ -15,11 +16,17 @@ public class CommonService {
 
 	@PersistenceContext
 	private EntityManager entityManager;
-
+    //查询当前时间
 	public Timestamp getCurrentTime() {
 		Query query = entityManager.createNativeQuery("select now() from dual");
 		Timestamp currTime = (Timestamp) query.getSingleResult();
 		return currTime;
 	}
-
+    
+	//查询当前日期
+//	public Date getCurrentDate() {
+//		Query query = entityManager.createNativeQuery("select CURDATE() from dual");
+//		Date currDate = (Date) query.getSingleResult();
+//		return currDate;
+//	}
 }

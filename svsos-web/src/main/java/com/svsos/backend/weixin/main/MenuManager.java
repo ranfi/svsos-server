@@ -1,7 +1,6 @@
 package com.svsos.backend.weixin.main;
 import org.slf4j.Logger;  
 import org.slf4j.LoggerFactory;
-
 import com.svsos.backend.weixin.pojo.AccessToken;
 import com.svsos.backend.weixin.pojo.Button;
 import com.svsos.backend.weixin.pojo.CommonButton;
@@ -22,7 +21,7 @@ public class MenuManager {
         // 第三方用户唯一凭证  
         String appId = "wx05df8f67d2213386";  
         // 第三方用户唯一凭证密钥  
-        String appSecret = "a7c5877fd3ad5c508d297eb8171ca9ab ";  
+        String appSecret = "a7c5877fd3ad5c508d297eb8171ca9ab";  
   
         // 调用接口获取access_token  
         AccessToken at = WeixinUtil.getAccessToken(appId, appSecret);  
@@ -37,7 +36,7 @@ public class MenuManager {
             else  
                 log.info("菜单创建失败，错误码：" + result);  
         }  
-    }  
+    }    
   
     /** 
      * 组装菜单数据 
@@ -128,5 +127,5 @@ public class MenuManager {
         menu.setButton(new Button[] { mainBtn1, mainBtn2, mainBtn3 });  
   
         return menu;  
-    }  
+    } 
 }  

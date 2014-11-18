@@ -11,6 +11,8 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
@@ -20,6 +22,7 @@ import org.slf4j.LoggerFactory;
 
 import com.svsos.backend.weixin.pojo.AccessToken;
 import com.svsos.backend.weixin.pojo.Menu;
+import com.svsos.backend.weixin.resp.BaseBean;
 /** 
  * 公众平台通用接口工具类 
  *  
@@ -35,6 +38,10 @@ public class WeixinUtil {
      
     // 菜单创建（POST） 限100（次/天）  
     public static String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN"; 
+    
+    public static String kf_news_url= "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN";
+    
+    public static String openid_url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=APPSECRET&code=CODE&grant_type=authorization_code";  
   
     /** 
      * 发起https请求并获取结果 
@@ -152,5 +159,73 @@ public class WeixinUtil {
         }  
       
         return result;  
+    } 
+    
+    public static int Runkf(BaseBean getkfnews, String token) {
+    	int result = 0;
+    	// 拼装创建的url
+    	String url = kf_news_url.replace("ACCESS_TOKEN", token);
+    	// 将对象转换成json字符
+    	String jsonnews = JSONObject.fromObject(getkfnews).toString();
+    	// 调用接口创建
+    	JSONObject jsonObject = httpRequest(url, "POST", jsonnews);
+    	if (null != jsonObject) {
+	    	if (0 != jsonObject.getInt("errcode")) {
+	    	result = jsonObject.getInt("errcode");
+	    	log.error("调用客服接口失败 errcode:{} errmsg:{}", jsonObject.getInt("errcode"), jsonObject.getString("errmsg"));
+	    	}
+    	}
+    	return result; 
+    }
+    
+    /**
+	 * 获取用户的cookie值 cookie值的组成是用户
+	 * @param request
+	 * @return
+	 */
+    public static String getCookieValue(HttpServletRequest request){
+    	Cookie[] cookies = request.getCookies();  
+        String[] cooks = null;  
+        String username = null;  
+        if (cookies != null) {  
+            for (Cookie coo : cookies) {  
+                String aa = coo.getValue();  
+                cooks = aa.split("==");  
+            if (cooks.length == 2) {  
+                username = cooks[0];  
+            }  
+         } 
+       }
+        return username;
+    }
+    
+    /** 
+     * 获取openid 
+     *  
+     * @param code 凭证 
+     * @return 
+     */  
+      
+    public static String getOpenid(String code) {  
+        String openid = null;  
+        // 第三方用户唯一凭证  
+        String appid = "wx05df8f67d2213386";  
+        // 第三方用户唯一凭证密钥  
+        String appsecret = "a7c5877fd3ad5c508d297eb8171ca9ab";  
+       
+        String requestUrl = openid_url.replace("APPID", appid).replace("APPSECRET", appsecret).replace("CODE", code);  
+        // 发起GET请求获取凭证  
+        JSONObject jsonObject = httpRequest(requestUrl, "GET", null);  
+  
+        if (null != jsonObject) {  
+            try {  
+                openid=jsonObject.getString("openid");  
+            } catch (JSONException e) {  
+                openid = null;  
+                // 获取openid失败  
+                log.error("获取openid失败 errcode:{} errmsg:{}", jsonObject.getInt("errcode"), jsonObject.getString("errmsg"));  
+            }  
+        }  
+        return openid;  
     }  
 }  

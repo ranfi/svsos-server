@@ -3,7 +3,6 @@ package com.svsos.backend.weixin.util;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
-
 import org.apache.commons.lang3.StringUtils;
  
 /** 
@@ -80,5 +79,5 @@ public class SignUtil {
   
         String s = new String(tempArr);  
         return s;  
-    }  
+    }
 }  

@@ -3,6 +3,7 @@
 	<excludes>
 		<pattern>/static/*</pattern>
 		<pattern>/login</pattern>
+		<pattern>/wx/*</pattern>
 		<pattern>/cxf/*</pattern>
 		<pattern>/api/*</pattern>
 		<pattern>/javasimon/*</pattern>
