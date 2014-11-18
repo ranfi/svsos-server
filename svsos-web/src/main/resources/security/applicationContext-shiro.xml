@@ -24,7 +24,9 @@
 		<property name="filterChainDefinitions">
 			<value>
 				/login = authc
+				/wx/** = anon
 				/wx_api = anon
+				/gotokf** = anon
 				/logout = logout
 				/account/** = user
 				/api/secure/** = authcBasic
