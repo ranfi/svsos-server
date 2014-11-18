@@ -1,16 +1,14 @@
-/*******************************************************************************
- * Copyright (c) 2005, 2014 springside.github.io
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- *******************************************************************************/
+
 package com.svsos.backend.controller;
 
 import com.svsos.backend.model.WorkUser;
+import com.svsos.backend.model.WxUser;
 import com.svsos.backend.repositories.jpa.WorkUserDao;
 import com.svsos.backend.repositories.jpa.WxUserDao;
 import com.svsos.backend.service.CommonService;
 import com.svsos.backend.weixin.util.DESTools;
 import com.svsos.core.utils.EncryptUtils;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +20,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 import java.io.UnsupportedEncodingException;
 import java.sql.Timestamp;
 
@@ -64,20 +63,20 @@ public class WXLoginController {
         String message = "";
         String openid = request.getParameter("idKey");
         DESTools des = new DESTools();
-        //if(openid != null && !"".equals(openid))
+        if(openid != null && !"".equals(openid))
         {
-//			openid = java.net.URLDecoder.decode(openid,"utf-8");
-//			openid = des.getDesString(openid);
-//			WxUser wxuser = wxUserDao.findWxUserByWxId(openid);
+			openid = java.net.URLDecoder.decode(openid,"utf-8");
+			openid = des.getDesString(openid);
+			WxUser wxuser = wxUserDao.findWxUserByWxId(openid);
             WorkUser user = workUserDao.findWorkUserByAccount(userName);
             if (user != null) {
                 String userPwd = user.getLoginPwd();
                 String Pwd = EncryptUtils.md5Encrypt((EncryptUtils.md5Encrypt(passWord.getBytes("GBK"))).getBytes("GBK"));
                 if (userPwd.endsWith(Pwd)) {
                     Timestamp loginTime = commonService.getCurrentTime();
-//					if(wxuser != null){
-//						user.setWxId(wxuser.getWxId());						
-//					}
+					if(wxuser != null){
+						user.setWxId(wxuser.getWxId());						
+					}
                     user.setLoginTime(loginTime);
                     user.setStatus(2);
                     workUserDao.save(user);
@@ -97,10 +96,10 @@ public class WXLoginController {
                 message = "用户不存在";
             }
         }
-//		else{
-//			
-//			message = "请检查参数有效性";
-//		}
+		else{
+			
+			message = "请检查参数有效性";
+		}
 
         model.addAttribute("message", message);
         return "weixin/login";
