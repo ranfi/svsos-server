@@ -20,4 +20,7 @@ public interface ServiceOrderDao extends PagingAndSortingRepository<ServiceOrder
 
 	@Query(value = "select * from ss_service_order t1 where t1.accept_worker_id=?1 and Year(t1.create_time) >= year( curdate( )) ORDER BY t1.create_time", nativeQuery = true)
 	public List <ServiceOrder> findServiceOrderByacceptWorkerIdAndCurrenYear(Integer id);
+	
+	@Query(value = "select * from ss_service_order t1 where t1.accept_worker_id=?1 and t1.`status`='3' ORDER BY t1.create_time", nativeQuery = true)
+	public List <ServiceOrder> findServiceOrderByacceptWorkerIdAndStatus(Integer id);
 }
