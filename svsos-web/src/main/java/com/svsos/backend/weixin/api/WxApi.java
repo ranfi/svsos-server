@@ -64,7 +64,7 @@ public class WxApi {
         // 响应消息  
         PrintWriter out = response.getWriter();  
         out.print(respMessage);  
-        out.write(respMessage);
+       // out.write(respMessage);
         out.close();
     	
     }  

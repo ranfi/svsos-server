@@ -1,5 +1,6 @@
 package com.svsos.backend.weixin.service;
 
+import java.net.URLEncoder;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
@@ -19,6 +20,7 @@ import com.svsos.backend.service.CommonService;
 import com.svsos.backend.weixin.resp.Article;
 import com.svsos.backend.weixin.resp.NewsMessage;
 import com.svsos.backend.weixin.resp.TextMessage;
+import com.svsos.backend.weixin.util.DESTools;
 import com.svsos.backend.weixin.util.MessageUtil;
 import com.svsos.core.utils.JsonMapper;
 
@@ -212,7 +214,7 @@ public class WxService {
 				if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {
 					Timestamp createTime = commonService.getCurrentTime();
 					WxUser user = wxUserDao.findWxUserByWxId(fromUserName);					
-					if(user != null && (user.getFollowStatus() == 0))						
+					if(user != null)						
 					{
 						user.setFollowStatus(1);
 						user.setCreateTime(createTime);
@@ -225,8 +227,11 @@ public class WxService {
 						user.setCreateTime(createTime);
 						user.setExpireTime(createTime.getTime() + 24 * 3600);
 					}	
-					wxUserDao.save(user);					
-					respContent = "谢谢您的关注！";
+					wxUserDao.save(user);
+					DESTools des = new DESTools();
+					String openid = URLEncoder.encode(des.getEncString(fromUserName), "utf-8");
+					String url = "http://weixin.svsos.com/svsos-web/wx/login?idKey="+openid;
+					respContent = "谢谢您的关注，请先点击<a href=\""+ url +"\">绑定</a>";
 				}
 				// 取消订阅
 				else if (eventType.equals(MessageUtil.EVENT_TYPE_UNSUBSCRIBE)) {

@@ -100,9 +100,8 @@ public class WXLoginController {
 			
 			message = "请检查参数有效性";
 		}
-
+        
         model.addAttribute("message", message);
         return "weixin/login";
     }
-
 }

@@ -11,7 +11,7 @@ import sun.misc.BASE64Encoder;
  * 工具类 
  *  
  * @author zhouliangjun 
- * @date 2014-11-09
+ * @date 2014-11-08
  */ 
 public class DESTools 
 {

@@ -19,7 +19,7 @@
 	<!--[if IE 7]>
 		<link rel="stylesheet" href="${ctx}/static/font-awesome/css/font-awesome-ie7.css">
 	<![endif]-->
-	<link href="${ctx}/static/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<!--<link href="${ctx}/static/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>-->
 	<link href="${ctx}/static/bootstrap-switch/css/bootstrap-switch.min.css" type="text/css"/>
 	<!-- END GLOBAL MANDATORY STYLES -->
 	<!-- BEGIN PAGE LEVEL STYLES -->
@@ -99,12 +99,12 @@
 	<script src="${ctx}/static/js/login.js" type="text/javascript"></script>      
 	<!-- END PAGE LEVEL SCRIPTS --> 
 	<script>
-	<shiro:authenticated>window.location="${ctx}/main"</shiro:authenticated>
+	/* <shiro:authenticated>window.location="${ctx}/main"</shiro:authenticated>
 	jQuery(document).ready(function() {     
   		Metronic.init(); // init metronic core components
 		Layout.init(); // init current layout
  		Login.init();
-	});
+	}); */
 
 	</script>
 	<!-- END JAVASCRIPTS -->

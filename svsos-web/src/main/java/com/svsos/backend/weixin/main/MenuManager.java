@@ -47,17 +47,17 @@ public class MenuManager {
     	ViewButton btn11 = new ViewButton();  
         btn11.setName("新/待接收工单");  
         btn11.setType("view");  
-        btn11.setUrl("http://www.baidu.com");  
+        btn11.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx05df8f67d2213386&redirect_uri=http://weixin.svsos.com/svsos-web/wx/order&response_type=code&scope=snsapi_base&state=123#wechat_redirect"); 
   
         ViewButton btn12 = new ViewButton();  
         btn12.setName("待完成工单");  
         btn12.setType("view");  
-        btn12.setUrl("http://www.baidu.com");  
+        btn12.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx05df8f67d2213386&redirect_uri=http://weixin.svsos.com/svsos-web/wx/order&response_type=code&scope=snsapi_base&state=123#wechat_redirect");  
   
         ViewButton btn13 = new ViewButton();  
         btn13.setName("所有工单");  
         btn13.setType("view");  
-        btn13.setUrl("http://www.baidu.com"); 
+        btn13.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx05df8f67d2213386&redirect_uri=http://weixin.svsos.com/svsos-web/wx/order&response_type=code&scope=snsapi_base&state=123#wechat_redirect"); 
   
         ViewButton btn14 = new ViewButton();  
         btn14.setName("工单地图");  
