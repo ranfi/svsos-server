@@ -1,22 +1,5 @@
 package com.svsos.backend.weixin.api;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import net.sf.json.JSONObject;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
-
 import com.svsos.backend.weixin.pojo.AccessToken;
 import com.svsos.backend.weixin.resp.Article;
 import com.svsos.backend.weixin.resp.BaseNews;
@@ -24,6 +7,20 @@ import com.svsos.backend.weixin.resp.Kfnews;
 import com.svsos.backend.weixin.util.DESTools;
 import com.svsos.backend.weixin.util.JSONUtil;
 import com.svsos.backend.weixin.util.WeixinUtil;
+import net.sf.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
 
 /** 
  * 客服开发 

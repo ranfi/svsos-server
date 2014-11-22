@@ -1,12 +1,12 @@
 package com.svsos.backend.weixin.util;
-import java.security.Key;
+
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
-
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
+import java.security.Key;
 /** 
  * 工具类 
  *  

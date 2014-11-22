@@ -1,11 +1,12 @@
 package com.svsos.backend.weixin.util;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.ConnectException;
-import java.net.URL;
+import com.svsos.backend.weixin.pojo.AccessToken;
+import com.svsos.backend.weixin.pojo.Menu;
+import com.svsos.backend.weixin.resp.BaseBean;
+import net.sf.json.JSONException;
+import net.sf.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
@@ -13,16 +14,12 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
-
-import net.sf.json.JSONException;
-import net.sf.json.JSONObject;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.svsos.backend.weixin.pojo.AccessToken;
-import com.svsos.backend.weixin.pojo.Menu;
-import com.svsos.backend.weixin.resp.BaseBean;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.ConnectException;
+import java.net.URL;
 /** 
  * 公众平台通用接口工具类 
  *  

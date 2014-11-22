@@ -1,22 +1,19 @@
 package com.svsos.backend.weixin.service;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
-import org.springframework.stereotype.Service;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.svsos.backend.model.MsgResponse;
 import com.svsos.backend.repositories.jpa.MsgResponseDao;
-
 import net.sf.json.JSONException;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 @Service
 public class RespTest {

@@ -1,9 +1,10 @@
 package com.svsos.backend.weixin.util;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
-import org.apache.commons.lang3.StringUtils;
  
 /** 
  * 请求校验工具类 

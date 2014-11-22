@@ -1,12 +1,11 @@
 package com.svsos.backend.weixin.util;
 
-import java.io.PrintWriter;
-import java.util.Collection;
-
-import javax.servlet.http.HttpServletResponse;
-
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.PrintWriter;
+import java.util.Collection;
 
 /**
  * JSON工具类

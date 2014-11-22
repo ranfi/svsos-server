@@ -1,17 +1,5 @@
 package com.svsos.backend.weixin.service;
 
-import java.net.URLEncoder;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
-import org.springframework.stereotype.Service;
-
 import com.svsos.backend.model.MsgResponse;
 import com.svsos.backend.model.WxUser;
 import com.svsos.backend.repositories.jpa.MsgResponseDao;
@@ -23,6 +11,16 @@ import com.svsos.backend.weixin.resp.TextMessage;
 import com.svsos.backend.weixin.util.DESTools;
 import com.svsos.backend.weixin.util.MessageUtil;
 import com.svsos.core.utils.JsonMapper;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.net.URLEncoder;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 核心服务类

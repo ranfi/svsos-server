@@ -1,13 +1,9 @@
 package com.svsos.backend.weixin.main;
-import org.slf4j.Logger;  
-import org.slf4j.LoggerFactory;
-import com.svsos.backend.weixin.pojo.AccessToken;
-import com.svsos.backend.weixin.pojo.Button;
-import com.svsos.backend.weixin.pojo.CommonButton;
-import com.svsos.backend.weixin.pojo.ComplexButton;
-import com.svsos.backend.weixin.pojo.Menu;
-import com.svsos.backend.weixin.pojo.ViewButton;
+
+import com.svsos.backend.weixin.pojo.*;
 import com.svsos.backend.weixin.util.WeixinUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /** 
  * 菜单管理器类 
  *  
@@ -45,12 +41,12 @@ public class MenuManager {
      */  
     private static Menu getMenu() {  
     	ViewButton btn11 = new ViewButton();  
-        btn11.setName("新/待接收工单");  
+        btn11.setName("未接收工单");
         btn11.setType("view");  
         btn11.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx05df8f67d2213386&redirect_uri=http://weixin.svsos.com/svsos-web/wx/order&response_type=code&scope=snsapi_base&state=123#wechat_redirect"); 
   
         ViewButton btn12 = new ViewButton();  
-        btn12.setName("待完成工单");  
+        btn12.setName("未完成工单");
         btn12.setType("view");  
         btn12.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx05df8f67d2213386&redirect_uri=http://weixin.svsos.com/svsos-web/wx/order&response_type=code&scope=snsapi_base&state=123#wechat_redirect");  
   

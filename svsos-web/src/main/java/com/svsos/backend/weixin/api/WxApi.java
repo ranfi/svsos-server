@@ -1,16 +1,17 @@
 package com.svsos.backend.weixin.api;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import com.svsos.backend.weixin.service.WxService;
+import com.svsos.backend.weixin.util.SignUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import com.svsos.backend.weixin.service.WxService;
-import com.svsos.backend.weixin.util.SignUtil;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /** 
  * 核心请求处理类 
