@@ -1,15 +1,14 @@
 package com.svsos.backend.controller;
 
+import com.svsos.backend.entity.Menu;
+import com.svsos.backend.service.AccountService;
+import com.svsos.backend.service.MenuService;
+import com.svsos.core.utils.JsonMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import com.svsos.backend.entity.Menu;
-import com.svsos.backend.service.AccountService;
-import com.svsos.backend.service.MenuService;
-import com.svsos.core.utils.JsonMapper;
 
 @Controller
 @RequestMapping(value = "/menu")

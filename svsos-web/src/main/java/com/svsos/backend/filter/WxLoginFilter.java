@@ -1,22 +1,15 @@
 package com.svsos.backend.filter;
 
-import java.io.IOException;
-import java.net.URLEncoder;
+import com.svsos.backend.weixin.util.DESTools;
+import com.svsos.backend.weixin.util.WeixinUtil;
+import org.apache.commons.lang.StringUtils;
 
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import javax.servlet.*;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.lang.StringUtils;
-
-import com.svsos.backend.weixin.util.DESTools;
-import com.svsos.backend.weixin.util.WeixinUtil;
+import java.io.IOException;
+import java.net.URLEncoder;
 
 public class WxLoginFilter implements Filter {
 

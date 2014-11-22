@@ -5,23 +5,17 @@
  *******************************************************************************/
 package com.svsos.backend.web;
 
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.StringTokenizer;
-import java.util.TreeMap;
-
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.lang3.Validate;
-
 import com.google.common.base.Charsets;
 import com.google.common.net.HttpHeaders;
 import com.svsos.core.utils.Collections3;
 import com.svsos.core.utils.EncodeUtils;
+import org.apache.commons.lang3.Validate;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.*;
+import java.util.Map.Entry;
 
 /**
  * Http与Servlet工具类.

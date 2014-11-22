@@ -5,12 +5,11 @@
  *******************************************************************************/
 package com.svsos.backend.common.persistence;
 
-import java.util.Map;
-import java.util.Map.Entry;
-
+import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
 
-import com.google.common.collect.Maps;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class SearchFilter {
 

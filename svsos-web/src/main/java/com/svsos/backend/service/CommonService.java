@@ -1,14 +1,12 @@
 package com.svsos.backend.service;
 
-import java.sql.Date;
-import java.sql.Timestamp;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import java.sql.Timestamp;
 
 @Service
 @Transactional(readOnly = true)

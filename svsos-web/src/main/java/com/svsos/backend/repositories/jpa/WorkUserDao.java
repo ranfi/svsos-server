@@ -1,8 +1,7 @@
 package com.svsos.backend.repositories.jpa;
 
-import org.springframework.data.repository.PagingAndSortingRepository;
-
 import com.svsos.backend.model.WorkUser;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 
 public interface WorkUserDao extends PagingAndSortingRepository<WorkUser, Integer> {

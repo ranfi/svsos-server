@@ -1,11 +1,10 @@
 package com.svsos.backend.repositories.jpa;
 
-import java.util.List;
-
+import com.svsos.backend.model.ServiceOrder;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import com.svsos.backend.model.ServiceOrder;
+import java.util.List;
 
 public interface ServiceOrderDao extends PagingAndSortingRepository<ServiceOrder, Integer>{
 	

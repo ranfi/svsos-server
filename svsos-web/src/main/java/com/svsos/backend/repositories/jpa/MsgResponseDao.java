@@ -1,6 +1,7 @@
 package com.svsos.backend.repositories.jpa;
-import org.springframework.data.repository.PagingAndSortingRepository;
+
 import com.svsos.backend.model.MsgResponse;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface MsgResponseDao extends PagingAndSortingRepository<MsgResponse, Integer>{
 	

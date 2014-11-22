@@ -5,7 +5,7 @@
 <% String selected = request.getParameter("num"); %>
 <html>
 <head>
-    <title>销售工单</title>
+    <title>网点工单查询</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta id="viewport" name="viewport" content="width=device-width;initial-scale=1.0;minimum-scale=1.0; maximum-scale=1.0'user-scalable=no" />
     <meta name="format-detection" content="telephone=no">
@@ -24,13 +24,10 @@
         input{outline:0px;}
         .fbold{font-weight: bold;}
         .fGray{color: #666;}
-
             /*公用-对齐方式*/
         .alignCenter{text-align:center;}
         .alignRight{text-align:right;}
         .margin1em{margin: 1em;}
-
-
         .navbox{background-color: #f5f5f5;border-bottom: 1px solid #cccccc;}
         .nav{
             column-count: 3;
@@ -43,7 +40,10 @@
             -ms-column-gap: 0;
             border: 1px solid #2e97f0;
             border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
             background-color: #ffffff;
+            height:30px;
         }
         .nav a{display:block;width:100%;height: 100%;color: #333;line-height: 2em; }
         .nav .active a{color: #ffffff;background-color: #2e97f0;}
@@ -67,8 +67,6 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>
-        </header>
        <section class="navbox">
            <ul class="nav alignCenter margin1em">
                <li class="active"><a href="javascript:void(0);">待接工单</a></li>
@@ -88,14 +86,14 @@
                         <div class="order_user">
                             <p class="fbold">${list.name}</p>
                             <p class="fbold alignCenter">洗衣机</p>                            
-                            <p class="user_tel alignRight"><a class="tel_bt" href="tel:1383838438">${list.tel}</a></p>
+                            <p class="user_tel alignRight"><a class="tel_bt" href="tel:${list.tel}">${list.tel}</a></p>
                         </div>
                         <p>${list.address}</p>
                         <div class="order_info">
                             <span class="info_left">${list.createTime}</span><span class="info_right alignRight fGray">未接单<a href="javascript:void(0);" class="orderbt" onclick="accept('${list.orderLsh}')">接单</a></span>
                         </div>                      
                     </div>
-                  
+
                    </c:forEach>
                 </div>
                 <div class="tabCont01">
@@ -107,7 +105,7 @@
                         <div class="order_user">
                             <p class="fbold">${list.name}</p>
                             <p class="fbold alignCenter">洗衣机</p>
-                            <p class="user_tel alignRight"><a class="tel_bt" href="tel:1383838438">${list.tel}</a></p>
+                            <p class="user_tel alignRight"><a class="tel_bt" href="tel:${list.tel}">${list.tel}</a></p>
                         </div>
                         <p>${list.address}</p>
                         <div class="order_info">
@@ -125,7 +123,7 @@
                         <div class="order_user">
                             <p class="fbold">${list.name}</p>
                             <p class="fbold alignCenter">洗衣机</p>
-                            <p class="user_tel alignRight"><a class="tel_bt" href="tel:1383838438">${list.tel}</a></p>
+                            <p class="user_tel alignRight"><a class="tel_bt" href="tel:${list.tel}">${list.tel}</a></p>
                         </div>
                         <p>${list.address}</p>
                         <div class="order_info">

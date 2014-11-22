@@ -8,7 +8,6 @@ import com.svsos.backend.repositories.jpa.WxUserDao;
 import com.svsos.backend.service.CommonService;
 import com.svsos.backend.weixin.util.DESTools;
 import com.svsos.core.utils.EncryptUtils;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +19,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import java.io.UnsupportedEncodingException;
 import java.sql.Timestamp;
 
@@ -65,7 +63,7 @@ public class WXLoginController {
         DESTools des = new DESTools();
         if(openid != null && !"".equals(openid))
         {
-			openid = java.net.URLDecoder.decode(openid,"utf-8");
+//			openid = java.net.URLDecoder.decode(openid,"utf-8");
 			openid = des.getDesString(openid);
 			WxUser wxuser = wxUserDao.findWxUserByWxId(openid);
             WorkUser user = workUserDao.findWorkUserByAccount(userName);

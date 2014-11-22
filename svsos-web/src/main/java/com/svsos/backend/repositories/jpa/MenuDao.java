@@ -1,12 +1,11 @@
 package com.svsos.backend.repositories.jpa;
 
-import java.util.List;
-
+import com.svsos.backend.entity.Menu;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import com.svsos.backend.entity.Menu;
+import java.util.List;
 
 public interface MenuDao extends PagingAndSortingRepository<Menu, Integer> {
 

@@ -5,40 +5,62 @@
 <% String selected = request.getParameter("num"); %>
 <html>
 <head>
-    <title>工单详情页</title>
+    <title>工单详情</title>
+    <meta id="viewport" name="viewport"
+          content="width=device-width;initial-scale=1.0;minimum-scale=1.0; maximum-scale=1.0'user-scalable=no"/>
     <link href="${ctx}/static/bootstrap/3.2/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
-    <script src="${ctx}/static/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
-    <script src="${ctx}/static/bootstrap/3.2/js/bootstrap.min.js" type="text/javascript"></script>
 </head>
 <body>
-<form action="" method="post" name="myform">
-    <p></p>
-    <h4>&nbsp;&nbsp;&nbsp;工单详情</h4>
-
-    <div class="table-responsive">
-        <p>&nbsp;&nbsp;&nbsp;报单时间：${order.startTime}</p>
-
-        <p>&nbsp;&nbsp;&nbsp;用户姓名：${order.name}</p>
-
-        <p>&nbsp;&nbsp;&nbsp;用户电话：${order.tel}</p>
-
-        <p>&nbsp;&nbsp;&nbsp;用户地址：${order.address}</p>
-
-        <p>&nbsp;&nbsp;&nbsp;产品类型：${order.productCategory}</p>
-
-        <p>&nbsp;&nbsp;&nbsp;服务类型：${order.serviceType}</p>
-
-        <p>&nbsp;&nbsp;&nbsp;服务原因：${order.remark}</p>
-
-        <p>&nbsp;&nbsp;&nbsp;派单系统：${order.remark}</p>
-
-        <p>&nbsp;&nbsp;&nbsp;用户要求：${order.remark}</p>
-        <c:if test="${order.status==2}"><p>&nbsp;&nbsp;&nbsp;工单状态:&nbsp;&nbsp;未接单</p></c:if>
-        <c:if test="${order.status==3}"><p>&nbsp;&nbsp;&nbsp;工单状态:&nbsp;&nbsp;已接单</p></c:if>
-        <c:if test="${order.status==4}"><p>&nbsp;&nbsp;&nbsp;工单状态:&nbsp;&nbsp;已完成</p></c:if>
-        <c:if test="${order.status==5}"><p>&nbsp;&nbsp;&nbsp;工单状态:&nbsp;&nbsp;已回访</p></c:if>
-        <c:if test="${order.status==6}"><p>&nbsp;&nbsp;&nbsp;工单状态:&nbsp;&nbsp;已结算</p></c:if>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4><i class="glyphicon glyphicon-search"></i> 工单详情</h4>
     </div>
-</form>
+    <div class="panel-body">
+        <div style="padding:10px;">
+            <form class="form-horizontal" method="post" name="myform">
+                <div class="form-group">
+                    <label for="bdTime">报单时间：</label>
+                    <span>${order.startTime}</span>
+                </div>
+                <div class="form-group">
+                    <label for="customerName">客户姓名：</label>
+                    <span>${order.name}</span>
+                </div>
+                <div class="form-group">
+                    <label for="customerTel">客户电话：</label>
+                    <span>${order.tel}</span>
+                </div>
+                <div class="form-group">
+                    <label for="customerAddress">客户地址：</label>
+                    <span>${order.address}</span>
+                </div>
+                <div class="form-group">
+                    <label for="productCate">产品类型：</label>
+                    <span>${order.productCategory}</span>
+                </div>
+                <div class="form-group">
+                    <label for="remark">服务原因：</label>
+                    <span>${order.remark}</span>
+                </div>
+                <div class="form-group">
+                    <label for="orderChannel">工单来源：</label>
+                    <span>${order.remark}</span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">用户要求：</label>
+                    <span>${order.remark}</span>
+                </div>
+                <div class="form-group">
+                    <label for="orderStatus">工单状态：</label>
+                <span> <c:if test="${order.status==2}">未接单</c:if>
+                <c:if test="${order.status==3}">已接单</c:if>
+                <c:if test="${order.status==4}">已完成</c:if>
+                <c:if test="${order.status==5}">已回访</c:if>
+                <c:if test="${order.status==6}">已结算</c:if></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>

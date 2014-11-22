@@ -5,9 +5,8 @@
  *******************************************************************************/
 package com.svsos.backend.repositories.jpa;
 
-import org.springframework.data.repository.PagingAndSortingRepository;
-
 import com.svsos.backend.entity.Role;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface RoleDao extends PagingAndSortingRepository<Role, Long> {
 

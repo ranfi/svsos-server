@@ -1,17 +1,12 @@
 package com.svsos.backend.common.persistence;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-
-import javax.sql.DataSource;
-
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.Hibernate;
-import org.hibernate.dialect.H2Dialect;
-import org.hibernate.dialect.MySQL5InnoDBDialect;
-import org.hibernate.dialect.Oracle10gDialect;
-import org.hibernate.dialect.PostgreSQLDialect;
-import org.hibernate.dialect.SQLServer2008Dialect;
+import org.hibernate.dialect.*;
+
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class Hibernates {
 	/**

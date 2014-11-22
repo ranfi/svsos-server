@@ -1,12 +1,11 @@
 package com.svsos.backend.entity;
 
-import java.sql.Timestamp;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "ss_menu")

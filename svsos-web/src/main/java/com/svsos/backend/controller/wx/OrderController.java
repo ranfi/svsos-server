@@ -1,16 +1,4 @@
 package com.svsos.backend.controller.wx;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.svsos.backend.model.ServiceOrder;
 import com.svsos.backend.model.WorkUser;
@@ -18,6 +6,17 @@ import com.svsos.backend.repositories.jpa.ServiceOrderDao;
 import com.svsos.backend.repositories.jpa.WorkUserDao;
 import com.svsos.backend.service.CommonService;
 import com.svsos.backend.weixin.util.WeixinUtil;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 /** 
  * 全部工单查询 以及操作
  *  

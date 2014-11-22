@@ -5,20 +5,14 @@
  *******************************************************************************/
 package com.svsos.backend.common.persistence;
 
-import java.util.Collection;
-import java.util.List;
-
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Path;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
-
+import com.google.common.collect.Lists;
+import com.svsos.core.utils.Collections3;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.jpa.domain.Specification;
 
-import com.google.common.collect.Lists;
-import com.svsos.core.utils.Collections3;
+import javax.persistence.criteria.*;
+import java.util.Collection;
+import java.util.List;
 
 public class DynamicSpecifications {
 

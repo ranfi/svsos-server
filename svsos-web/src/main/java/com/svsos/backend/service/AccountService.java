@@ -5,19 +5,6 @@
  *******************************************************************************/
 package com.svsos.backend.service;
 
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.lang3.StringUtils;
-import org.apache.shiro.SecurityUtils;
-import org.javasimon.aop.Monitored;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.domain.Specification;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.svsos.backend.common.exception.ServiceException;
 import com.svsos.backend.common.persistence.DynamicSpecifications;
 import com.svsos.backend.common.persistence.Hibernates;
@@ -29,6 +16,18 @@ import com.svsos.backend.repositories.jpa.UserDao;
 import com.svsos.backend.service.ShiroDbRealm.ShiroUser;
 import com.svsos.core.utils.Digests;
 import com.svsos.core.utils.EncodeUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.SecurityUtils;
+import org.javasimon.aop.Monitored;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.Map;
 
 @Component
 @Transactional
