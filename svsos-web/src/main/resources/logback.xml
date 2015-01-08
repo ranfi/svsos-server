@@ -60,7 +60,8 @@
 	</appender>
 
 	<!-- project default level -->
-	<logger name="com.lianxi.backend" level="INFO" />
+	<logger name="com.lianxi.backend" level="DEBUG" />
+	<logger name="org.springframework" level="DEBUG" />
 	
 	<!-- business log 使用独立的appender，不继承Root的appender -->
 	<logger name="business" level="INFO" additivity="false">

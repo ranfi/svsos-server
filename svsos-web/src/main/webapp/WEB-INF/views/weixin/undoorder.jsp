@@ -16,7 +16,7 @@
    <script src="${ctx}/static/bootstrap/3.2/js/bootstrap.min.js" type="text/javascript"></script>
    <script>
 	   function todetail(orderLsh){
-		   window.location.href='./orderDetail.do?orderLsh='+orderLsh;
+		   window.location.href='./orderDetail?orderLsh='+orderLsh;
 		  }
    </script>
    </head>
