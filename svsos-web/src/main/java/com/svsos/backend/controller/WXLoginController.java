@@ -23,7 +23,7 @@ import java.io.UnsupportedEncodingException;
 import java.sql.Timestamp;
 
 /**
- * wxLoginController负责打开登录页面(GET请求)和登录出错页面(POST请求)，
+ * wxLoginController负责打开登录页面(GET请求)
  * <p/>
  * 真正登录的POST请求由Filter完成,
  *
@@ -63,7 +63,7 @@ public class WXLoginController {
         DESTools des = new DESTools();
         if(openid != null && !"".equals(openid))
         {
-//			openid = java.net.URLDecoder.decode(openid,"utf-8");
+			//openid = java.net.URLDecoder.decode(openid,"utf-8");
 			openid = des.getDesString(openid);
 			WxUser wxuser = wxUserDao.findWxUserByWxId(openid);
             WorkUser user = workUserDao.findWorkUserByAccount(userName);

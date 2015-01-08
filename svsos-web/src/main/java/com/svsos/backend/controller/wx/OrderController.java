@@ -6,6 +6,8 @@ import com.svsos.backend.repositories.jpa.ServiceOrderDao;
 import com.svsos.backend.repositories.jpa.WorkUserDao;
 import com.svsos.backend.service.CommonService;
 import com.svsos.backend.weixin.util.WeixinUtil;
+
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -153,7 +156,7 @@ public class OrderController {
 	    String username = WeixinUtil.getCookieValue(request);
 	    String orderLsh = request.getParameter("orderLsh");
 	    ServiceOrder order = new ServiceOrder();
-	    Timestamp createTime = commonService.getCurrentTime();
+	    Timestamp updateTime = commonService.getCurrentTime();
 	    if(username != null){	    	
 	        WorkUser user = workUserDao.findWorkUserByAccount(username);
 	        if(user != null){
@@ -161,7 +164,36 @@ public class OrderController {
 	        	 if(order != null){
     	
         			order.setStatus(3);
-        			order.setCreateTime(createTime);
+        			order.setUpdateTime(updateTime);
+        			serviceOrderDao.save(order);
+ 	        	        		 
+	        	 }	
+	        }	        		
+        }
+	    return "redirect:/wx/order";
+	}
+	
+	@RequestMapping(value = "/finish",method = RequestMethod.POST)
+	public String finish(HttpServletResponse response , HttpServletRequest request ,Model model) {
+	    String username = WeixinUtil.getCookieValue(request);
+	    String orderLsh = request.getParameter("orderLsh");
+	    String finishPic = request.getParameter("srcUrl");
+	    if(StringUtils.isBlank(finishPic))
+	    {
+	    	 String message = "请先上传图片";
+	    	 model.addAttribute("message", message);
+	    	return "redirect:/wx/orderDetail?orderLsh=" + orderLsh;
+	    }	
+	    ServiceOrder order = new ServiceOrder();
+	    Timestamp updateTime = commonService.getCurrentTime();
+	    if(username != null){	    	
+	        WorkUser user = workUserDao.findWorkUserByAccount(username);
+	        if(user != null){
+	        	 order = serviceOrderDao.findServiceOrderByOrderLsh(user.getId(),orderLsh);
+	        	 if(order != null){
+    	            order.setFinishPic(finishPic);
+        			order.setStatus(4);
+        			order.setUpdateTime(updateTime);
         			serviceOrderDao.save(order);
  	        	        		 
 	        	 }	

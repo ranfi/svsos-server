@@ -6,6 +6,8 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+
+import java.sql.Date;
 import java.sql.Timestamp;
 
 @Service
@@ -22,9 +24,9 @@ public class CommonService {
 	}
     
 	//查询当前日期
-//	public Date getCurrentDate() {
-//		Query query = entityManager.createNativeQuery("select CURDATE() from dual");
-//		Date currDate = (Date) query.getSingleResult();
-//		return currDate;
-//	}
+	public Date getCurrentDate() {
+		Query query = entityManager.createNativeQuery("select CURDATE() from dual");
+		Date currDate = (Date) query.getSingleResult();
+		return currDate;
+	}
 }

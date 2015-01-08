@@ -54,41 +54,16 @@ public class MenuManager {
         btn13.setName("所有工单");  
         btn13.setType("view");  
         btn13.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx05df8f67d2213386&redirect_uri=http://weixin.svsos.com/svsos-web/wx/order&response_type=code&scope=snsapi_base&state=123#wechat_redirect"); 
-  
-        ViewButton btn14 = new ViewButton();  
-        btn14.setName("工单地图");  
-        btn14.setType("view");  
-        btn14.setUrl("http://www.baidu.com");  
-  
-        CommonButton btn21 = new CommonButton();  
-        btn21.setName("21");  
-        btn21.setType("click");  
-        btn21.setKey("21");  
-  
-        CommonButton btn22 = new CommonButton();  
-        btn22.setName("22");  
-        btn22.setType("click");  
-        btn22.setKey("22");  
-  
-        CommonButton btn23 = new CommonButton();  
-        btn23.setName("23");  
-        btn23.setType("click");  
-        btn23.setKey("23");  
-  
-        CommonButton btn24 = new CommonButton();  
-        btn24.setName("24");  
-        btn24.setType("click");  
-        btn24.setKey("24");  
-  
-        CommonButton btn25 = new CommonButton();  
-        btn25.setName("25");  
-        btn25.setType("click");  
-        btn25.setKey("25");  
+//  
+//        ViewButton btn14 = new ViewButton();  
+//        btn14.setName("工单地图");  
+//        btn14.setType("view");  
+//        btn14.setUrl("http://www.baidu.com");  
   
         ViewButton btn31 = new ViewButton();  
         btn31.setName("个人信息");  
         btn31.setType("view");  
-        btn31.setUrl("http://www.baidu.com"); 
+        btn31.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx05df8f67d2213386&redirect_uri=http://weixin.svsos.com/svsos-web/wx/userInfoDetail&response_type=code&scope=snsapi_base&state=123#wechat_redirect");
   
         ViewButton btn32 = new ViewButton();  
         btn32.setName("帮助/说明");  
@@ -102,11 +77,12 @@ public class MenuManager {
   
         ComplexButton mainBtn1 = new ComplexButton();  
         mainBtn1.setName("工单查询");  
-        mainBtn1.setSub_button(new ViewButton[] { btn11, btn12, btn13, btn14 });  
+        mainBtn1.setSub_button(new ViewButton[] { btn11, btn12, btn13});  
   
-        ComplexButton mainBtn2 = new ComplexButton();  
-        mainBtn2.setName("工单完成");  
-        mainBtn2.setSub_button(new CommonButton[] { btn21, btn22, btn23, btn24, btn25 });  
+        ViewButton btn2 = new ViewButton();  
+        btn2.setName("每日签到");  
+        btn2.setType("view");  
+        btn2.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx05df8f67d2213386&redirect_uri=http://weixin.svsos.com/svsos-web/wx/signin&response_type=code&scope=snsapi_base&state=123#wechat_redirect"); 
   
         ComplexButton mainBtn3 = new ComplexButton();  
         mainBtn3.setName("个人中心");  
@@ -120,7 +96,7 @@ public class MenuManager {
          * menu.setButton(new Button[] { mainBtn1, mainBtn2, btn33 }); 
          */  
         Menu menu = new Menu();  
-        menu.setButton(new Button[] { mainBtn1, mainBtn2, mainBtn3 });  
+        menu.setButton(new Button[] { mainBtn1, btn2, mainBtn3 });  
   
         return menu;  
     } 
