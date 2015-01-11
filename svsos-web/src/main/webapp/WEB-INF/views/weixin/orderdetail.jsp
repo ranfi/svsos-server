@@ -5,8 +5,7 @@
 <html>
 <head>
     <title>工单详情</title>
-    <meta id="viewport" name="viewport"
-          content="width=device-width;initial-scale=1.0;minimum-scale=1.0; maximum-scale=1.0'user-scalable=no"/>
+    <meta id="viewport" name="viewport" content="width=device-width;initial-scale=1.0;minimum-scale=1.0; maximum-scale=1.0'user-scalable=no"/>
     <script src="${ctx}/static/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script src="${ctx}/static/js/ajaxfileupload.js" type="text/javascript"></script>
     <script src="${ctx}/static/js/order.js" type="text/javascript"></script>

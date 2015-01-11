@@ -47,7 +47,7 @@
 	<div class="content">
 		<!-- BEGIN LOGIN FORM -->
 		<form class="form-vertical login-form" method="post" action="${ctx}/wx/login/save">
-		    <input type="text" name="idKey" value="${idKey}" style="display:none">
+		    <input type="hidden" name="openid" value="${openid}">
 			<h3 class="form-title">登陆</h3>
 			<c:if test="${not empty message}">
 				<div id="message" class="alert alert-danger"><button data-dismiss="alert" class="close">×</button>${message}</div>

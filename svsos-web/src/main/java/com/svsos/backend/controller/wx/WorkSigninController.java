@@ -17,7 +17,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -49,22 +48,19 @@ public class WorkSigninController {
 	private CommonService commonService;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String list(HttpServletResponse response,
-			HttpServletRequest request, Model model) {
+	public String list(HttpServletResponse response, HttpServletRequest request, Model model) {
 		List<WorkerSignin> signinLists = new ArrayList<WorkerSignin>();
 		String username = WeixinUtil.getCookieValue(request);
 		if (username != null) {
 			WorkUser user = workUserDao.findWorkUserByAccount(username);
 			if (user != null) {
-				List<WorkerSignin> todayStatus = workerSigninDao
-						.findWorkerSigninForCurrByWorkId(user.getId());
+				List<WorkerSignin> todayStatus = workerSigninDao.findWorkerSigninForCurrByWorkId(user.getId());
 				if (null != todayStatus && todayStatus.size() > 0) {
 					model.addAttribute("hasSingn", 1);
 				} else {
 					model.addAttribute("hasSingn", 0);
 				}
-				signinLists = workerSigninDao.findWorkerSigninByWorkId(user
-						.getId());
+				signinLists = workerSigninDao.findWorkerSigninByWorkId(user.getId());
 			}
 		}
 		model.addAttribute("signinLists", signinLists);
@@ -72,8 +68,7 @@ public class WorkSigninController {
 	}
 
 	@RequestMapping(value = "/savelocation", method = RequestMethod.GET)
-	public void savelocation(HttpServletResponse response,
-			HttpServletRequest request, Model model) {
+	public void savelocation(HttpServletResponse response, HttpServletRequest request, Model model) {
 		Map<String, String> result = Maps.newHashMap();
 		String username = WeixinUtil.getCookieValue(request);
 		String location = request.getParameter("location");
@@ -93,8 +88,7 @@ public class WorkSigninController {
 		if (username != null) {
 			WorkUser user = workUserDao.findWorkUserByAccount(username);
 			if (user != null) {
-				List<WorkerSignin> todayStatus = workerSigninDao
-						.findWorkerSigninForCurrByWorkId(user.getId());
+				List<WorkerSignin> todayStatus = workerSigninDao.findWorkerSigninForCurrByWorkId(user.getId());
 				if (todayStatus == null || todayStatus.isEmpty()) {
 					signin.setWorkerId(user.getId());
 					signin.setSigninDate(dateTime);
@@ -120,7 +114,7 @@ public class WorkSigninController {
 		// 也可以是http://maps.google.cn/maps/geo?output=csv&key=abcdef&q=%s,%s，不过解析出来的是英文地址
 		// 密钥可以随便写一个key=abc
 		// output=csv,也可以是xml或json，不过使用csv返回的数据最简洁方便解析
-		String url = String.format("http://ditu.google.cn/maps/geo?output=csv&key=abcdef&q=%s,%s",latitude, longitude);
+		String url = String.format("http://ditu.google.cn/maps/geo?output=csv&key=abcdef&q=%s,%s", latitude, longitude);
 		URL myURL = null;
 		URLConnection httpsConn = null;
 		try {
@@ -130,10 +124,9 @@ public class WorkSigninController {
 			return null;
 		}
 		try {
-			httpsConn = (URLConnection) myURL.openConnection();
+			httpsConn = myURL.openConnection();
 			if (httpsConn != null) {
-				InputStreamReader insr = new InputStreamReader(
-						httpsConn.getInputStream(), "UTF-8");
+				InputStreamReader insr = new InputStreamReader(httpsConn.getInputStream(), "UTF-8");
 				BufferedReader br = new BufferedReader(insr);
 				String data = null;
 				if ((data = br.readLine()) != null) {

@@ -1,8 +1,14 @@
 package com.svsos.backend.model;
 
-import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.sql.Timestamp;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "ss_wx_user")
@@ -18,6 +24,8 @@ public class WxUser implements Serializable {
 	private Timestamp createTime;
 	private Long expireTime;
 	private Integer workerId;
+	private BigDecimal longitude;
+	private BigDecimal latitude;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -91,6 +99,22 @@ public class WxUser implements Serializable {
 
 	public void setWorkerId(Integer workerId) {
 		this.workerId = workerId;
+	}
+
+	public BigDecimal getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(BigDecimal longitude) {
+		this.longitude = longitude;
+	}
+
+	public BigDecimal getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(BigDecimal latitude) {
+		this.latitude = latitude;
 	}
 
 }

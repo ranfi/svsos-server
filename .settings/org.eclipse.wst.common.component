@@ -2,5 +2,6 @@
 <project-modules id="moduleCoreId" project-version="2.0">
 	<wb-module deploy-name="svsos-server">
 		<property name="context-root" value="svsos-server"/>
+		<wb-resource deploy-path="/" source-path="src/main/webapp"/>
 	</wb-module>
 </project-modules>
