@@ -13,6 +13,7 @@
 	type="text/css" rel="stylesheet" />
 <link href="${ctx}/static/bootstrap-switch/css/bootstrap-switch.min.css"
 	type="text/css" />
+<link href="${ctx}/static/css/common.css" type="text/css" rel="stylesheet"/>
 <style type="text/css">
 @charset "utf-8";
 
@@ -242,7 +243,7 @@ input {
 						showError, config);
 			} else {
 				//alert("Geolocation is not supported by this browser.");
-				alert("定位失败,用户已禁用位置获取权限");
+				//alert("定位失败,用户已禁用位置获取权限");
 			}
 		}
 
@@ -272,7 +273,7 @@ input {
 					//setAddress();
 				},
 				error : function(XMLHttpRequest, textStatus, errorThrown) {
-					alert("[x:" + x + ",y:" + y + "]地址位置获取失败,请手动选择地址");
+					//alert("[x:" + x + ",y:" + y + "]地址位置获取失败,请手动选择地址");
 					location.replace(location.href);
 				}
 			});
@@ -284,23 +285,35 @@ input {
 		function showError(error) {
 			switch (error.code) {
 			case error.PERMISSION_DENIED:
-				alert("定位失败,用户拒绝请求地理定位");
+				//alert("定位失败,用户拒绝请求地理定位");
 				//"User denied the request for Geolocation.[用户拒绝请求地理定位]"
 				break;
 			case error.POSITION_UNAVAILABLE:
-				alert("定位失败,位置信息是不可用");
+				//alert("定位失败,位置信息是不可用");
 				//"Location information is unavailable.[位置信息是不可用]"
 				break;
 			case error.TIMEOUT:
-				alert("定位失败,请求获取用户位置超时");
+				//alert("定位失败,请求获取用户位置超时");
 				//"The request to get user location timed out.[请求获取用户位置超时]"
 				break;
 			case error.UNKNOWN_ERROR:
-				alert("定位失败,定位系统失效");
+				//alert("定位失败,定位系统失效");
 				//"An unknown error occurred.[未知错误]"
 				break;
 			}
 		}
 	</script>
+	
+	       <footer>
+		    <nav>
+		        <div class="bottom">
+		            <ul class="bottomNav" >
+		                <li class="bottomIco bottomIco1 "><a href="${ctx}/wx/order"><i class="bottomBg"></i>我的工单</a></li>
+		                <li class="bottomIco bottomIco3 selected"><a href="${ctx}/wx/signin"><i class="bottomBg"></i>每日签到</a></li>
+		                <li class="bottomIco bottomIco4"><a href="${ctx}/wx/user/profile"><i class="bottomBg"></i>个人中心</a></li>
+		            </ul>
+		        </div>
+		    </nav>
+		</footer>
 </body>
 </html>

@@ -11,6 +11,7 @@
     <meta name="format-detection" content="telephone=no">
     <script src="${ctx}/static/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script src="${ctx}/static/js/order.js" type="text/javascript"></script>
+     <link href="${ctx}/static/css/common.css" type="text/css" rel="stylesheet"/>
     <style type="text/css">
         @charset "utf-8";
         *{margin:0;padding:0;list-style:none;}
@@ -63,17 +64,46 @@
         .user_tel{width: 30%;}
         .orderbt{display: inline-block;width: 50px;height: 23px;line-height:23px;background-color: #2e97f0;color: #ffffff;text-align: center;border-radius: 5px;margin-left: 4px;}
         .tel_bt{background-color: #2e97f0;height: 23px;line-height:23px;background-color: #2e97f0;color: #ffffff;text-align: center;border-radius: 2px;padding: 2px 5px;}
+        /*商品tab*/
+.mallTab{
+    width: 100%;height: 40px;
+    display: box;
+    display: -moz-box;
+    display: -webkit-box;
+    border-bottom: 1px solid #dddddd ;
+
+    /* column-count: 4;
+   column-gap: 0;
+   -webkit-column-count: 4;
+   -webkit-column-gap: 0;
+   -moz-column-count: 4;
+   -moz-column-gap: 0;
+   -ms-column-count: 4;
+   -ms-column-gap: 0;*/
+    /*padding: 0 1em 10px 1em;*/
+}
+.mallTab .tabLi{box-flex:1;-moz-box-flex:1;-webkit-box-flex:1;line-height: 40px;text-align: center;}
+.mallTab .tabLi a{color: #666666;font-size: 1.2em;text-decoration: none;}
+.mallTab .tabLi.selected a{color: #008cd5;border-bottom: 2px solid #008cd5;display: block;height: 39px;}
     </style>
 </head>
 <body>
     <div class="wrapper">
-       <section class="navbox">
+       <!-- <section class="navbox">
            <ul class="nav alignCenter margin1em">
                <li class="active"><a href="javascript:void(0);">待接工单</a></li>
                <li><a href="javascript:void(0);">待完成工单</a></li>
                <li><a href="javascript:void(0);">全部工单</a></li>
            </ul>
-       </section>
+       </section> -->
+        <nav>
+            <ul class="mallTab" >
+                <li class="tabLi selected "><a href="javascript:void(0);">待接工单</a></li>
+                <li class="tabLi"><a href="javascript:void(0);">待完成工单</a></li>
+                <li class="tabLi"><a href="javascript:void(0);">全部工单</a></li>
+             
+            </ul>
+        </nav>
         <section>
             <div class="tabConts">
                 <div class="tabCont01 on" id="ShowLists">
@@ -134,16 +164,28 @@
                 </div>
             </div>
         </section>
+       <footer>
+		    <nav>
+		        <div class="bottom">
+		            <ul class="bottomNav" >
+		                <li class="bottomIco bottomIco1 selected"><a href="${ctx}/wx/order"><i class="bottomBg"></i>我的工单</a></li>
+		                <li class="bottomIco bottomIco3"><a href="${ctx}/wx/signin"><i class="bottomBg"></i>每日签到</a></li>
+		                <li class="bottomIco bottomIco4"><a href="${ctx}/wx/user/profile"><i class="bottomBg"></i>个人中心</a></li>
+		            </ul>
+		        </div>
+		    </nav>
+		</footer>
     </div>
-    <script type="text/javascript">
-        $(".nav li").click(function(e){
-            e.preventDefault();
-            var index = $(this).index();
-            $(".nav .active").removeClass("active");
-            $(this).addClass("active");
-            $(".tabCont01.on").removeClass("on");
-            $(".tabCont01").eq(index).addClass("on");
-        });
+    <script type="text/javascript">        
+        $(function(){
+        	   $(".mallTab .tabLi").click(function(){
+        	       var index = $(this).index();
+        	       $(".mallTab .selected").removeClass("selected");
+        	       $(this).addClass("selected");
+        	       $(".tabCont01.on").removeClass("on");
+                   $(".tabCont01").eq(index).addClass("on");
+        	   });
+        	});
     </script>
 </body>
 </html>

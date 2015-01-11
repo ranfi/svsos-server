@@ -8,6 +8,7 @@
     <meta id="viewport" name="viewport"
           content="width=device-width;initial-scale=1.0;minimum-scale=1.0; maximum-scale=1.0'user-scalable=no"/>
     <link href="${ctx}/static/bootstrap/3.2/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+     <link href="${ctx}/static/css/common.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 <div class="panel panel-primary">
@@ -48,6 +49,17 @@
             </form>
         </div>
     </div>
+    <footer>
+		    <nav>
+		        <div class="bottom">
+		            <ul class="bottomNav" >
+		                <li class="bottomIco bottomIco1 "><a href="${ctx}/wx/order"><i class="bottomBg"></i>我的工单</a></li>
+		                <li class="bottomIco bottomIco3"><a href="${ctx}/wx/signin"><i class="bottomBg"></i>每日签到</a></li>
+		                <li class="bottomIco bottomIco4 selected"><a href="${ctx}/wx/user/profile"><i class="bottomBg"></i>个人中心</a></li>
+		            </ul>
+		        </div>
+		    </nav>
+		</footer>
 </div>
 </body>
 </html>

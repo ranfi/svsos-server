@@ -3,9 +3,9 @@ package com.svsos.backend.weixin.pojo;
 public class CustomerServiceRequest {
 
 	private String openid;
+	private String url;
 	private String picUrl;
 	private String title;
-	private String url;
 
 	public String getOpenid() {
 		return openid;
@@ -13,6 +13,14 @@ public class CustomerServiceRequest {
 
 	public void setOpenid(String openid) {
 		this.openid = openid;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 	public String getPicUrl() {
@@ -29,14 +37,6 @@ public class CustomerServiceRequest {
 
 	public void setTitle(String title) {
 		this.title = title;
-	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
 	}
 
 }
