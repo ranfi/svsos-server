@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 import com.svsos.backend.weixin.pojo.AccessToken;
 import com.svsos.backend.weixin.pojo.CustomerServiceRequest;
@@ -29,12 +28,12 @@ import com.svsos.backend.weixin.util.WeixinUtil;
  */
 @Controller
 @RequestMapping("/gotokf")
-public class WxKfAction extends MultiActionController {
+public class WxKfAction {
 	private static Logger log = LoggerFactory.getLogger(WxKfAction.class);
 
 	@RequestMapping(method = RequestMethod.POST)
-	@ResponseBody
-	public Object sendMessage(@RequestBody CustomerServiceRequest request) {
+	public @ResponseBody
+	Object sendMessage(@RequestBody CustomerServiceRequest request) {
 		String openid = request.getOpenid();
 		String picUrl = request.getPicUrl();
 		String url = request.getUrl();

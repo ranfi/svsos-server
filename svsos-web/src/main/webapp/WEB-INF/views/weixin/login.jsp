@@ -94,8 +94,6 @@
 	<script src="${ctx}/static/jquery-validation/1.11.1/jquery.validate.min.js" type="text/javascript"></script>
 	<!-- END PAGE LEVEL PLUGINS -->
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
-	<script src="${ctx}/static/js/metronic.js" type="text/javascript"></script>
-	<script src="${ctx}/static/layout/js/layout.js" type="text/javascript"></script>
 	<script src="${ctx}/static/js/login.js" type="text/javascript"></script>      
 	<!-- END PAGE LEVEL SCRIPTS --> 
 	<script>

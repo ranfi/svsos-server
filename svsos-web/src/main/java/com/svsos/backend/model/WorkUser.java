@@ -1,13 +1,21 @@
 package com.svsos.backend.model;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "ss_sp_worker")
 public class WorkUser implements Serializable {
-	
+
 	private static final long serialVersionUID = 52286212785215867L;
 	private Integer id;
 	private String account;
@@ -19,14 +27,16 @@ public class WorkUser implements Serializable {
 	private String skill;
 	private Integer acceptedOrderNum = 0;
 	private Integer finishedOrderNum = 0;
-	
+
 	private Integer complaintNum = 0;
 	private Integer todoOrderNum = 0;
 	private Timestamp createTime;
 	private Timestamp loginTime;
 	private Integer status = 1;
 	private Integer spId = 0;
-	private String wxId;	
+	private String wxId;
+
+	private ServicePoint servicePoint;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,7 +47,6 @@ public class WorkUser implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
 
 	public String getAccount() {
 		return account;
@@ -143,6 +152,7 @@ public class WorkUser implements Serializable {
 		this.status = status;
 	}
 
+	@Column(name = "sp_id")
 	public Integer getSpId() {
 		return spId;
 	}
@@ -150,7 +160,7 @@ public class WorkUser implements Serializable {
 	public void setSpId(Integer spId) {
 		this.spId = spId;
 	}
-	
+
 	public Timestamp getLoginTime() {
 		return loginTime;
 	}
@@ -166,5 +176,15 @@ public class WorkUser implements Serializable {
 	public void setWxId(String wxId) {
 		this.wxId = wxId;
 	}
-	
+
+	@ManyToOne
+	@JoinColumn(name = "sp_id", referencedColumnName = "sp_id", insertable = false, updatable = false)
+	public ServicePoint getServicePoint() {
+		return servicePoint;
+	}
+
+	public void setServicePoint(ServicePoint servicePoint) {
+		this.servicePoint = servicePoint;
+	}
+
 }

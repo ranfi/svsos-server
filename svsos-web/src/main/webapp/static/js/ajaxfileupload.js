@@ -102,8 +102,9 @@ jQuery.extend({
                         // process the data (runs the xml through httpData regardless of callback)
                         var data = jQuery.uploadHttpData( xml, s.dataType );   
                         // If a local callback was specified, fire it and pass it the data
-                        if ( s.success )
+                        if ( s.success ){
                             s.success( data, status );
+                        }
     
                         // Fire the global callback
                         if( s.global )
@@ -194,7 +195,7 @@ jQuery.extend({
         
         //fix by ranfi
         data = data.replace("<pre>","").replace("</pre>","");
-        
+    	data = data.replace(/<pre.*>/g,"");
         // If the type is "script", eval it in global context
         if ( type == "script" )
             jQuery.globalEval( data );

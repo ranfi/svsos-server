@@ -1,9 +1,17 @@
 package com.svsos.backend.model;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "ss_service_order")
@@ -30,10 +38,14 @@ public class ServiceOrder implements Serializable {
 	private Timestamp createTime;
 	private Integer payStatus;
 	private Integer orderChannel;
-	private Integer status;	
+	private Integer status;
 	private String remark;
 	private String finishPic;
 	private Date updateTime;
+
+	private ProductCategory productCate;
+
+	private OrderChannel orderChannelPo;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -69,6 +81,7 @@ public class ServiceOrder implements Serializable {
 		this.productBrand = productBrand;
 	}
 
+	@Column(name = "product_category")
 	public Integer getProductCategory() {
 		return productCategory;
 	}
@@ -189,6 +202,7 @@ public class ServiceOrder implements Serializable {
 		this.payStatus = payStatus;
 	}
 
+	@Column(name = "order_channel")
 	public Integer getOrderChannel() {
 		return orderChannel;
 	}
@@ -228,6 +242,25 @@ public class ServiceOrder implements Serializable {
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
-	
-	
+
+	@ManyToOne
+	@JoinColumn(name = "product_category", referencedColumnName = "id", updatable = false, insertable = false)
+	public ProductCategory getProductCate() {
+		return productCate;
+	}
+
+	public void setProductCate(ProductCategory productCate) {
+		this.productCate = productCate;
+	}
+
+	@ManyToOne
+	@JoinColumn(name = "order_channel", referencedColumnName = "id", insertable = false, updatable = false)
+	public OrderChannel getOrderChannelPo() {
+		return orderChannelPo;
+	}
+
+	public void setOrderChannelPo(OrderChannel orderChannelPo) {
+		this.orderChannelPo = orderChannelPo;
+	}
+
 }

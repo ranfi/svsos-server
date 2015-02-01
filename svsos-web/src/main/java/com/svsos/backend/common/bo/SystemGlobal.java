@@ -4,10 +4,8 @@ public class SystemGlobal {
 
 	public final static int PAGE_SIZE = 20;
 
-//	public final static String loc = "http://112.124.57.103";
-//	public final static String serverloc = "/opt/www/img/";
-	
-	
-	public final static String loc = "http://127.0.0.1";
-	public final static String serverloc ="D:/nginx/htdocs/img/";
+	public final static String IMAGE_SERVER_URL = "http://127.0.0.1:88";
+
+	public final static String IMAGE_SAVE_PATH = "/opt/resource/img/";
+
 }

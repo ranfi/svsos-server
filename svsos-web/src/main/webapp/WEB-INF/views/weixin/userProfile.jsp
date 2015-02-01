@@ -5,10 +5,11 @@
 <html>
 <head>
     <title>个人信息</title>
-    <meta id="viewport" name="viewport"
-          content="width=device-width;initial-scale=1.0;minimum-scale=1.0; maximum-scale=1.0'user-scalable=no"/>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <link href="${ctx}/static/bootstrap/3.2/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
-     <link href="${ctx}/static/css/common.css" type="text/css" rel="stylesheet"/>
+    <link href="${ctx}/static/css/common.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 <div class="panel panel-primary">
@@ -28,11 +29,11 @@
                 </div>
                 <div class="form-group">
                     <label for="customerTel">所属网点：</label>
-                    <span>${user.spId}</span>
+                    <span>${user.servicePoint.spName}</span>
                 </div>
                 <div class="form-group">
                     <label for="customerAddress">网点地址：</label>
-                    <span>${user.address}</span>
+                    <span>${user.servicePoint.address}</span>
                 </div>
                 <div class="form-group">
                     <label for="productCate">网点电话：</label>

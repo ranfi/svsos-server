@@ -5,35 +5,39 @@
 <html>
 <head>
     <title>工单详情</title>
-    <meta id="viewport" name="viewport" content="width=device-width;initial-scale=1.0;minimum-scale=1.0; maximum-scale=1.0'user-scalable=no"/>
+   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <script src="${ctx}/static/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script src="${ctx}/static/js/ajaxfileupload.js" type="text/javascript"></script>
     <script src="${ctx}/static/js/order.js" type="text/javascript"></script>
     <link href="${ctx}/static/bootstrap/3.2/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
  <script>
- function ajaxFileUpload()  
- {  var url='${ctx}/wx/orderDetail/upload';
-     $.ajaxFileUpload  
-     ({  
-             url:'./orderDetail/upload',  
-             secureuri:false,  
-             fileElementId:'fileToUpload',  
-             dataType: 'json',  
-             success: function (data, status)  
-             {  
-                 $('#img').css('display', 'display');
-                 $("#img").attr("src", data.imgPath);  
-                 $("#srcUrl").attr("value", data.url); 
-                 
-             },  
-             error: function (data, status, e)  
-             {  
-                 alert(data);  
-                 alert(data.message+" error:  "+e);  
-             }  
-               
-         }  
-     )  
+ function ajaxFileUpload() {  
+	 var url='${ctx}/wx/orderDetail/upload';
+	 var fileToUpload = $("#fileToUpload");
+	 if(fileToUpload.val() == "" || fileToUpload.val() == null){
+		alert("请选择上传图片"); 
+		return;
+	 }else{
+	     $.ajaxFileUpload({  
+	             url:'./orderDetail/upload',  
+	             secureuri:false,  
+	             fileElementId:'fileToUpload',  
+	             dataType: 'json',  
+	             success: function (data, status) {  
+	                 $('#img').css('display', 'display');
+	                 $("#img").attr("src", data.imgPath);  
+	                 $("#srcUrl").attr("value", data.url); 
+	             },  
+	             error: function (data, status, e)  
+	             {  
+	                 alert(data.message+" error:  " + e);  
+	             }  
+	               
+	         }  
+	     )
+	 }
      return false;  
  }
  </script>
@@ -67,7 +71,7 @@
                 </div>
                 <div class="form-group">
                     <label for="productCate">产品类型：</label>
-                    <span>${order.productCategory}</span>
+                    <span>${order.productCate.name}</span>
                 </div>
                 <div class="form-group">
                     <label for="remark">服务原因：</label>
@@ -75,7 +79,7 @@
                 </div>
                 <div class="form-group">
                     <label for="orderChannel">工单来源：</label>
-                    <span>${order.remark}</span>
+                    <span>${order.orderChannelPo.name}</span>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">用户要求：</label>
@@ -90,23 +94,27 @@
                 <c:if test="${order.status==6}">已结算</c:if></span>
                 </div>
                 <c:if test="${order.status==3}">
-	                <div class="form-group">                    
-		                <img id="img"  alt=""  style="display:none" height="90" width="120"/>    
-		                <input type="file" name="fileToUpload" id="fileToUpload"/>  
-		                <input type="hidden" name="srcUrl" id="srcUrl">
+                   <div class="form-group">
+                   		<img id="img"  alt="..."  class="img-thumbnail" height="90" width="120"/> 
+                   </div>
+	               <div class="form-group">
+					    <label for="fileToUpload">上传工单凭证</label>
+					    <input type="file" id="fileToUpload" name="fileToUpload">
+					    <input type="hidden" name="srcUrl" id="srcUrl">
 		                <input type="hidden" name="orderLsh" id="orderLsh" value="${order.orderLsh}" >
-		                <button class="button" id="buttonUpload" onclick="return ajaxFileUpload();">上传</button>  	           
-	                </div>
-	                <div class="form-group">
-	                   <button class="button" id="buttonUpload" type="submit">工单完成</button>
-	                </div>
+					    <p class="help-block">上传完成工单的手机拍照,支持jpg和png格式</p>
+					    <button class="btn btn-primary" id="buttonUpload" onclick="return ajaxFileUpload();">上传</button>  
+				  </div>
+                <div class="form-group">
+                   <button class="btn btn-primary" id="buttonUpload" type="submit">工单完成</button>
+                </div>
                 </c:if>
                 
-                <c:if test="${order.status==4}">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">完成图片：</label>
-                    <img  alt=""  src="${sysurl}${order.finishPic}"  height="90" width="120"/>  
-                </div>
+                <c:if test="${order.status == 4}">
+	                <div class="form-group">
+	                    <label for="finishOrderPic">完成工单图片：</label>
+	                    <img  alt=""  src="${sysurl}${order.finishPic}" class="img-thumbnail"  height="90" width="120"/>  
+	                </div>
                 </c:if>
             </form>
         </div>

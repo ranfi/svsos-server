@@ -65,7 +65,8 @@ public class WXLoginController {
 		String userName = request.getParameter("username");
 		String passWord = request.getParameter("password");
 		String message = "";
-		String openid = request.getParameter("openid");
+		// String openid = request.getParameter("openid");
+		String openid = "oeQwbuDiEF7WVzaorSDDLPt-ucI8";
 
 		if (openid != null && !"".equals(openid)) {
 			// openid = java.net.URLDecoder.decode(openid,"utf-8");
